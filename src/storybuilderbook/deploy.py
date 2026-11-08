@@ -43,6 +43,7 @@ from pathlib import Path
 from typing import Optional
 
 from .audit_deploy import audit, DeployTomlNotFoundError
+from .editions import build_editions
 
 BRANCH = "gh-pages"
 BOOK_TOML = "book.toml"
@@ -268,7 +269,10 @@ def main() -> int:
         paths = compute_deploy_root(repo_root, build_dir)
 
         # Build
-        run(["mdbook", "build"], cwd=repo_root)
+        try:
+            build_editions(repo_root)
+        except subprocess.CalledProcessError as exc:
+            raise DeployError("Book edition build failed; nothing was pushed.") from exc
 
         if not paths.deploy_root.exists():
             raise DeployError(f"Build output not found: {paths.deploy_root}")

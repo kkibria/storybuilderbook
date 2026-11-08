@@ -4,6 +4,8 @@ title: Connections and Consequences
 
 # {{ page.title }}
 
+**Edition:** English · [বাংলা](../bn/topics/connections.html)
+
 **Outline — not a completed tutorial.**
 
 **Envisioned chapter.**

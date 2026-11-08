@@ -4,6 +4,8 @@ title: Your Own Story
 
 # {{ page.title }}
 
+**Edition:** English · [বাংলা](../bn/topics/your-story.html)
+
 **Outline — not a completed tutorial.**
 
 **Envisioned chapter.**

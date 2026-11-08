@@ -1,22 +1,25 @@
 # Story Studio companion book
 
-This is the separate public-facing mdBook for the envisioned Story Studio writer experience. The Studio application remains private and experimental. Available/Prototype/Envisioned labels distinguish demonstrated behavior from future interactions. No Studio application source or private research is included.
+Public book: https://kkibria.github.io/storybuilderbook/ — [English](https://kkibria.github.io/storybuilderbook/) · [বাংলা](https://kkibria.github.io/storybuilderbook/bn/).
 
-## Local preview
+Studio itself remains private and experimental. Available/Prototype/Envisioned labels separate demonstrated behavior from future ideas. No Studio source, private research, credentials or user database is part of this book.
 
-Use the existing mdBook starter and frontmatter preprocessor:
+## Build and preview both editions
 
 ```sh
-mdbook build
-mdbook serve
+uv run bookbuild
+uv run bookserve
 ```
 
-Prerequisites: `mdbook` and `mdbook-frntmtr` on PATH. The foundation was built with mdbook 0.5.2 and the installed `mdbook-frntmtr`. Source is `booksrc/`; configured output is `gh-pages/docs/`. Chapter frontmatter and `{{ page.title }}` use the starter’s preprocessor. Existing Python maintenance tools are retained; they are not required just to read or build this foundation.
+The preview binds only to `127.0.0.1:3000`; use `--port 3001` if needed. It builds on startup; restart it after editing. Requires `mdbook` and `mdbook-frntmtr` on PATH. The existing frontmatter preprocessor is retained. `mdbook build` alone builds English only; use `bookbuild` for both editions.
 
-The first three chapters are written. Later chapters are explicitly outlines. The borrowed-umbrella walkthrough was executed in the real private application on 8 November 2026, with fictional sample data. Its embedded PNGs are authentic browser captures and readable crops, not mockups. Re-run affected examples and refresh screenshots whenever the UI changes; do not relabel a mockup as a working screenshot.
+English source stays in `booksrc/` and keeps its existing URLs. Bangla source is `booksrc-bn/`, configured by `editions/bn/book.toml`, built into `gh-pages/docs/bn/`. Every chapter links to its corresponding page in the other edition. The first three chapters are complete; later chapters remain outlines. Both beginner exercises and authentic screenshots were verified on 8 November 2026, including saved properties, interface switching, Bangla text and the complete story. Refresh affected examples/images when UI behavior changes.
 
-## Publication status
+## Deploy through the existing workflow
 
-Prepared locally; **not published**. No Git remote or confirmed GitHub destination existed during preparation. The starter’s old README URL was not treated as destination authorization. Studio is not part of this book repository and must not be published with it.
+```sh
+uv run deploy --dry-run
+uv run deploy
+```
 
-The existing `deploy` helper builds, audits assets, and **force-pushes an orphan commit to `origin gh-pages`**, using `/docs` for GitHub Pages. It requires an initialized source history and a confirmed remote. Do not run it until the destination and public action are explicitly authorized. Once configured and authorized, review `uv run deploy --dry-run` first; the dry run builds/audits and does not push. No publication command has been executed for this foundation.
+Deployment now builds English and Bangla before applying the existing asset audit. A failed build prevents publication. The established helper force-pushes an orphan `gh-pages` artifact commit to this book repository’s `origin`; GitHub Pages uses `gh-pages` and `/docs`. This is a public action. Keep the Studio repository separate. The source history remains on `main`.

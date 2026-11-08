@@ -4,6 +4,8 @@ title: From Scaffold to Prose
 
 # {{ page.title }}
 
+**Edition:** English · [বাংলা](../bn/topics/prose.html)
+
 **Outline — not a completed tutorial.**
 
 **Envisioned chapter.**

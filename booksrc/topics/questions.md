@@ -4,6 +4,8 @@ title: Questions and Creative Choices
 
 # {{ page.title }}
 
+**Edition:** English · [বাংলা](../bn/topics/questions.html)
+
 **Outline — not a completed tutorial.**
 
 **Envisioned chapter.**

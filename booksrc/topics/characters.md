@@ -4,6 +4,8 @@ title: Characters, Intentions, and Events
 
 # {{ page.title }}
 
+**Edition:** English · [বাংলা](../bn/topics/characters.html)
+
 **Outline — not a completed tutorial.**
 
 **Envisioned chapter.**

@@ -17,3 +17,6 @@ template = "fm.template"
 #[preprocessor.svgdx]
 # local copy 
 # command = "cargo run --manifest-path D:/mdbook-svgdx/Cargo.toml --quiet"
+[output.html]
+additional-css = ["theme/bangla.css"]
+site-url = "/storybuilderbook/"

@@ -1,0 +1,16 @@
+[book]
+authors = ["Khan Kibria"]
+language = "bn"
+src = "../../booksrc-bn"
+title = "স্টোরি স্টুডিও — লেখকের সঙ্গী"
+
+[build]
+build-dir = "../../gh-pages/docs/bn"
+
+[preprocessor.frntmtr]
+command = "mdbook-frntmtr"
+template = "fm.template"
+
+[output.html]
+additional-css = ["../../theme/bangla.css"]
+site-url = "/storybuilderbook/bn/"

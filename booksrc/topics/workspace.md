@@ -4,6 +4,8 @@ title: The Writer’s Workspace
 
 # {{ page.title }}
 
+**Edition:** English · [বাংলা](../bn/topics/workspace.html)
+
 **Available — orientation to the verified private workspace.**
 
 Think of the workspace as a place to keep the story behind the words: who wants something, what happens, and what follows. The graph is one way to see those connections; it is not the finished prose.
@@ -12,7 +14,7 @@ Think of the workspace as a place to keep the story behind the words: who wants 
 
 *The real private workspace after the first exercise. [Open the full-size image](../assets/04-complete.png) to inspect small labels.*
 
-At the top, **Your stories** lets you return to saved work. **Start a new story** creates another project. A new story begins empty, so you can introduce the people and circumstances you actually want.
+At the top, **Your stories** lets you return to saved work. **Interface language** switches English/Bangla without translating story content. **Story Properties**, beside the story title, lets you rename the story and edit its subtitle, synopsis, genre, story language and author notes; these changes save with the project. **Start a new story** creates another project. A new story begins empty, so you can introduce the people and circumstances you actually want.
 
 **Story journeys** keeps your place. Beside it, the intention buttons ask what you want to do next: expand, deepen, escalate, reveal, connect, redirect, resolve, or conclude. Below them, the development panel offers ways to express that intention. The panel can ask for a missing essential detail before showing a preview.
 

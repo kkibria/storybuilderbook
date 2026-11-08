@@ -4,6 +4,8 @@ title: The Impossible Letter
 
 # {{ page.title }}
 
+**Edition:** English · [বাংলা](../bn/topics/impossible-letter.html)
+
 **Outline — not a completed tutorial.**
 
 **Envisioned chapter.**

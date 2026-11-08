@@ -4,6 +4,8 @@ title: A Richer Story
 
 # {{ page.title }}
 
+**Edition:** English · [বাংলা](../bn/topics/richer-story.html)
+
 **Outline — not a completed tutorial.**
 
 **Envisioned chapter.**

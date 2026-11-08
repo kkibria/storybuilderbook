@@ -4,6 +4,8 @@ title: Time, Knowledge, and Revelation
 
 # {{ page.title }}
 
+**Edition:** English · [বাংলা](../bn/topics/time.html)
+
 **Outline — not a completed tutorial.**
 
 **Envisioned chapter.**
