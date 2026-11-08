@@ -283,9 +283,11 @@ Before approving the ending, you can test **↶ Undo last decision** immediately
 
 ## Follow a distant connection
 
-After approval, use **Or select a story element** to select Maya’s redaction decision from step 18. In the inspector, follow the connection to the carbon-copy discovery from step 15; the incoming **CAUSES** relation tells you why the decision became possible. The stamp discovery and arrival are other branches; not every earlier event caused every later one.
+After approval, use **Or select a story element** to select Maya’s redaction decision from step 18. In the inspector, follow the connection to the carbon-copy discovery from step 15; the **CAUSES** connection leads back to the discovery that made the decision possible. The inspector lists relation names and neighbors without labeling incoming/outgoing direction; use the graph arrows or the explicit bindings from steps 15 and 18 to verify direction. The stamp discovery and arrival are other branches; not every earlier event caused every later one.
 
 ![The real inspector displays the decision and its explicit connections.](../assets/m8/08-inspector.png)
+
+The inspector also retains **original_text**, including the rejected first draft from step 18. That is provenance, not another event. The confirmed label and **action** contain the redacted-copy decision.
 
 The element picker disappears once an element is selected. You can follow connection buttons or click graph nodes; reload to reset selection and bring back the picker. **Fit** shows the whole network; zoom in or use the inspector for full wording. **Arrange** changes the layout, not the story. Returning to a saved story preserves the graph and approved ending.
 
