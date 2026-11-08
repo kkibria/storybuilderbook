@@ -22,7 +22,7 @@ You decide what matters, what becomes true, and what stays unresolved. The inten
 
 An **outline** describes a future chapter, not a completed tutorial. Feature status and chapter completeness are different things.
 
-The first three chapters form this initial book foundation. [The workspace](topics/workspace.md) orients you, and [the tiny-story exercise](topics/first-story.md) demonstrates a complete structural beginning-to-ending journey using real controls. Later chapters are deliberately brief outlines.
+The first three chapters form this initial book foundation. [The workspace](topics/workspace.md) orients you, and [the tiny-story exercise](topics/first-story.md) demonstrates a complete structural beginning-to-ending journey using real controls. The [larger-story working method](topics/richer-story.md) and [Maya mystery workshop](topics/impossible-letter.md) now extend that foundation. The other later chapters remain brief outlines.
 
 The exercise and screenshots were verified on **8 November 2026** in the private build. Its interface currently says **Storybuilder · Narrative Workshop**; this book uses **Story Studio** for the broader vision. Screenshots are real application captures using a fictional sample, not interface mockups.
 

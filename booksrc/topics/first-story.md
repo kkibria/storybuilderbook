@@ -109,3 +109,5 @@ You did it: Mina has a desire, encounters a complication, acts because of it, an
 ## Make one small change
 
 Optional variation: start a new version in which Mina finds the tear **before** setting out. Change the discovery wording and consider whether the same repair still follows. This variation is a creative invitation, not another verified step-by-step tutorial. You decide what changes the story’s meaning.
+
+Continue with [the larger-story working method](richer-story.md) and [the Maya mystery workshop](impossible-letter.md) when you are ready to hold several goals and a deliberate loose end together.

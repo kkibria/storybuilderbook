@@ -13,7 +13,7 @@ uv run bookserve
 
 The preview binds only to `127.0.0.1:3000`; use `--port 3001` if needed. It builds on startup; restart it after editing. Requires `mdbook` and `mdbook-frntmtr` on PATH. The existing frontmatter preprocessor is retained. `mdbook build` alone builds English only; use `bookbuild` for both editions.
 
-English source stays in `booksrc/` and keeps its existing URLs. Bangla source is `booksrc-bn/`, configured by `editions/bn/book.toml`, built into `gh-pages/docs/bn/`. Every chapter links to its corresponding page in the other edition. The first three chapters are complete; later chapters remain outlines. Both beginner exercises and authentic screenshots were verified on 8 November 2026, including saved properties, interface switching, Bangla text and the complete story. Refresh affected examples/images when UI behavior changes.
+English source stays in `booksrc/` and keeps its existing URLs. Bangla source is `booksrc-bn/`, configured by `editions/bn/book.toml`, built into `gh-pages/docs/bn/`. Every chapter links to its corresponding page in the other edition. The first three chapters, the larger-story working method, and the Maya mystery exercise are complete; the other later chapters remain outlines. Both beginner exercises and authentic screenshots were verified on 8 November 2026, including saved properties, interface switching, Bangla text and the complete story. Refresh affected examples/images when UI behavior changes. The Maya workshop builds 24 nodes and 49 relationships using existing controls, with separate fact/belief handling and one deliberately open commitment.
 
 ## Deploy through the existing workflow
 
