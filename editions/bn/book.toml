@@ -12,5 +12,5 @@ command = "mdbook-frntmtr"
 template = "fm.template"
 
 [output.html]
-additional-css = ["../../theme/bangla.css"]
+additional-css = ["bangla.css"]
 site-url = "/storybuilderbook/bn/"
