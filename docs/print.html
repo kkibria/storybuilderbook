@@ -1,0 +1,618 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Story Studio — A Writer’s Companion</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/bangla-17513f7d.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-c4d25199.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-ccd91c11.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Story Studio — A Writer’s Companion</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="welcome-to-story-studio"><a class="header" href="#welcome-to-story-studio">Welcome to Story Studio</a></h1>
+<p><strong>Edition:</strong> English · <a href="bn/index.html">বাংলা</a></p>
+<p>A story can begin with a promise, an image, or a question you cannot leave alone. Story Studio is an exploration of a workspace that helps you develop that beginning while keeping the story yours.</p>
+<p>This public companion describes the <strong>writer experience we want to deliver</strong> and the parts we can already demonstrate. Studio itself is a <strong>private, local, experimental application</strong>. Publishing this book does not make the application public, downloadable, or supported. There is no public Studio release announced here.</p>
+<p>You decide what matters, what becomes true, and what stays unresolved. The intended collaboration is straightforward: you imagine; Studio helps organize; an LLM may elaborate; you decide what to keep. A welcome surprise can enrich your story without taking it over.</p>
+<h2 id="read-the-status-labels"><a class="header" href="#read-the-status-labels">Read the status labels</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Label</th><th>Meaning in this book</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Available</strong></td><td>Verified in the current private application. It does not mean publicly available.</td></tr>
+<tr><td><strong>Prototype</strong></td><td>Demonstrated experimentally; limitations and any separate tools must be stated.</td></tr>
+<tr><td><strong>Envisioned</strong></td><td>A planned or conceptual interaction, not an existing control.</td></tr>
+</tbody>
+</table>
+</div>
+<p>An <strong>outline</strong> describes a future chapter, not a completed tutorial. Feature status and chapter completeness are different things.</p>
+<p>The first three chapters form this initial book foundation. <a href="#the-writers-workspace">The workspace</a> orients you, and <a href="#your-first-tiny-story">the tiny-story exercise</a> demonstrates a complete structural beginning-to-ending journey using real controls. The <a href="#a-richer-story">larger-story working method</a> and <a href="#the-impossible-letter">Maya mystery workshop</a> now extend that foundation. The other later chapters remain brief outlines.</p>
+<p>The exercise and screenshots were verified on <strong>8 November 2026</strong> in the private build. Its interface currently says <strong>Storybuilder · Narrative Workshop</strong>; this book uses <strong>Story Studio</strong> for the broader vision. Screenshots are real application captures using a fictional sample, not interface mockups.</p>
+<p>You do not need the private application to read this book. To perform an Available exercise, you need access to a private local build provided separately. This book does not provide that access.</p>
+<p><strong>Available:</strong> an English/Bangla interface and editable story properties. The book has corresponding English and Bangla editions, including real screenshots of the same tiny-story exercise. Story language and interface language are independent; your writing is not automatically translated.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="the-writers-workspace"><a class="header" href="#the-writers-workspace">The Writer’s Workspace</a></h1>
+<p><strong>Edition:</strong> English · <a href="bn/topics/workspace.html">বাংলা</a></p>
+<p><strong>Available — orientation to the verified private workspace.</strong></p>
+<p>Think of the workspace as a place to keep the story behind the words: who wants something, what happens, and what follows. The graph is one way to see those connections; it is not the finished prose.</p>
+<p><img src="assets/04-complete.png" alt="The completed umbrella sample in the current private workspace, with story direction above the graph and ending choices."></p>
+<p><em>The real private workspace after the first exercise. <a href="assets/04-complete.png">Open the full-size image</a> to inspect small labels.</em></p>
+<p>At the top, <strong>Your stories</strong> lets you return to saved work. <strong>Interface language</strong> switches English/Bangla without translating story content. <strong>Story Properties</strong>, beside the story title, lets you rename the story and edit its subtitle, synopsis, genre, story language and author notes; these changes save with the project. <strong>Start a new story</strong> creates another project. A new story begins empty, so you can introduce the people and circumstances you actually want.</p>
+<p>You can enter text in any Unicode-supported language, regardless of the interface or declared story language. No automatic translation occurs.</p>
+<p><strong>Story journeys</strong> keeps your place. Beside it, the intention buttons ask what you want to do next: expand, deepen, escalate, reveal, connect, redirect, resolve, or conclude. Below them, the development panel offers ways to express that intention. The panel can ask for a missing essential detail before showing a preview.</p>
+<p>The preview is a pause for your judgment. Read the proposed meaning, correct a binding if needed, and confirm only when it expresses your intention. The graph changes after confirmation. <strong>Undo last decision</strong> can recover the most recent accepted decision; it is not an unrestricted edit of any earlier moment.</p>
+<p>The status area shows the current situation and unresolved commitments. Resolving a goal and approving an ending are separate author choices. You may also deliberately approve an open ending; this first exercise uses a resolved one.</p>
+<p><strong>Envisioned — the broader workspace.</strong> A derived timeline, an integrated scaffold-to-prose action, a prose editor, and a review space for generated inventions belong to the intended experience. They are not present as integrated controls in this verified build. The later outlines describe them as possibilities, not instructions to find nonexistent buttons.</p>
+<p>Local saving is available for the structured story. Closing a browser is different from deleting its saved project. The current application does not save a final prose manuscript as part of that workflow.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="your-first-tiny-story"><a class="header" href="#your-first-tiny-story">Your First Tiny Story</a></h1>
+<p><strong>Edition:</strong> English · <a href="bn/topics/first-story.html">বাংলা</a></p>
+<p><strong>Available — complete exercise verified in the private application on 8 November 2026.</strong></p>
+<p>You need access to the current private build, open in your browser. This exercise ends with a small <strong>structured story</strong>, not an automatically generated prose manuscript.</p>
+<h2 id="a-promise-and-a-tear"><a class="header" href="#a-promise-and-a-tear">A promise and a tear</a></h2>
+<p>Mina has promised to return her neighbor’s borrowed umbrella before the neighbor leaves. On the way, she notices a tear in it. She stitches the tear and returns the umbrella in time. Her promise is kept.</p>
+<p>Your aim is to give Mina a goal, introduce that complication, connect the repair to it, and approve the ending. You do not need to supply a whole cast, a detailed setting, or exact dates.</p>
+<h2 id="1-give-the-story-a-home"><a class="header" href="#1-give-the-story-a-home">1. Give the story a home</a></h2>
+<p>If the controls are in Bangla, choose <strong>English</strong> from <strong>অ্যাপের ভাষা</strong> at the top; in English this control is labeled <strong>Interface language</strong>. If they are already in English, leave the setting as it is.</p>
+<p>Open <strong>Start a new story</strong>. Enter <strong>Umbrella draft</strong> as the <strong>Story title</strong>. Leave <strong>Random seed</strong> at its default and select <strong>Create story ↗</strong>.</p>
+<p><img src="assets/00-create.png" alt="The real new-story form filled with Umbrella draft, the default seed, and the Create story button."></p>
+<p><em>Name the story; the seed does not need a creative decision for this lesson.</em></p>
+<p>An empty workspace opens. Before adding events, try changing the story’s information.</p>
+<p>Choose <strong>Story Properties</strong> beside the story title. Change <strong>Story title</strong> to <strong>The Borrowed Umbrella</strong>. You can also add a subtitle, synopsis, genre, and author notes. In this sample, the subtitle is <strong>A promise kept</strong>. These fields are optional. New stories currently start with <strong>English</strong> as <strong>Story language</strong>, regardless of the interface language. You can override it independently. Keep <strong>English</strong> for this exercise and select <strong>Save properties</strong>.</p>
+<p><img src="assets/01-properties.png" alt="The real Story Properties form shows the renamed story, optional information, story language and save button."></p>
+<p><em>Renaming updates the title and Your stories without making a new story. Optional text, including mixed English/Bangla notes, is stored as written. Reopen Story Properties or reload to check it.</em></p>
+<p>At the top of the application, <strong>Interface language</strong> changes the controls between <strong>English</strong> and <strong>বাংলা</strong>. Try Bangla, then return to English for the remaining English instructions. This choice is remembered in your browser. It does not change <strong>Story language</strong>, translate your writing, or create another story. Even unsaved property text remains while you switch.</p>
+<p><img src="assets/01-language.png" alt="The actual English interface language selector offers English and Bangla."></p>
+<p><em>The interface language is separate from the story’s language. For the full Bangla walkthrough, open the Bangla edition from the chapter’s language link.</em></p>
+<p>Choose <strong>Expand</strong> among the intention buttons.</p>
+<h2 id="2-give-mina-something-to-want"><a class="header" href="#2-give-mina-something-to-want">2. Give Mina something to want</a></h2>
+<p>Choose <strong>Establish a goal or motivation</strong> in the development panel.</p>
+<p>For <strong>Whose goal is this?</strong>, select <strong>Introduce one instead…</strong>. Enter <strong>Mina</strong> under <strong>What is its name?</strong>, then choose <strong>Continue to preview</strong>.</p>
+<p>The next question asks <strong>What do they want to achieve?</strong> Enter:</p>
+<blockquote>
+<p>Return the borrowed umbrella before her neighbor leaves.</p>
+</blockquote>
+<p>Choose <strong>Continue to preview</strong> again. Despite its name, that button can lead to another essential question before the preview appears.</p>
+<p><img src="assets/02-goal-preview.png" alt="The actual goal preview introduces Mina and records her wish to return the umbrella before her neighbor leaves."></p>
+<p><em>Read the proposed meaning before confirming it.</em></p>
+<p>Check that it introduces Mina and gives her the intended goal. Choose <strong>Confirm this development</strong>. Mina and her goal now appear in the graph, and the status lists an unresolved goal.</p>
+<h2 id="3-let-something-complicate-it"><a class="header" href="#3-let-something-complicate-it">3. Let something complicate it</a></h2>
+<p>Keep <strong>Expand</strong> selected. Choose <strong>Another specific occurrence</strong>. Under <strong>What happened?</strong>, enter:</p>
+<blockquote>
+<p>Mina notices a tear in the borrowed umbrella.</p>
+</blockquote>
+<p>Choose <strong>Continue to preview</strong>, read the event, and select <strong>Confirm this development</strong>. The graph now includes the discovery. The goal is still unresolved: noticing the tear has not fulfilled the promise.</p>
+<p>“Another specific occurrence” is the current event button’s label. You do not need to introduce a second character or a separately named umbrella object for this small lesson.</p>
+<h2 id="4-bring-the-promise-to-a-resolution"><a class="header" href="#4-bring-the-promise-to-a-resolution">4. Bring the promise to a resolution</a></h2>
+<p>Choose <strong>Resolve</strong>, then <strong>Resolve a commitment through a specific development</strong>.</p>
+<p>The current sample has one unresolved goal, so the preview can select it. Under <strong>What happens to resolve it?</strong>, enter:</p>
+<blockquote>
+<p>Mina stitches the tear and returns the umbrella before her neighbor leaves.</p>
+</blockquote>
+<p>Choose <strong>Continue to preview</strong>. Check that the target is Mina’s original goal.</p>
+<p>Open <strong>Add detail or revise a binding</strong>, then choose <strong>Optional: Which event enables the resolution?</strong> Select <strong>Mina notices a tear in the borrowed umbrella.</strong> and choose <strong>Continue to preview</strong>. You may collapse the detail menu to read the preview.</p>
+<p><img src="assets/03-resolution-preview.png" alt="The real resolution preview shows the repaired umbrella action, Mina’s goal, and the earlier discovery as its cause."></p>
+<p><em>The repair resolves the promise and is connected to the discovery that prompted it. “Cause” here records that narrative connection; it does not supply an exact time.</em></p>
+<p>Select <strong>Confirm this development</strong>. The unresolved-goal count should now be zero. The app has recorded your intended resolution; it has not assessed the quality of the story’s prose or independently checked a clock deadline.</p>
+<h2 id="5-decide-that-this-story-is-finished"><a class="header" href="#5-decide-that-this-story-is-finished">5. Decide that this story is finished</a></h2>
+<p>Choose <strong>Conclude</strong>. The panel switches to the existing ending choices. Select <strong>Approve a conclusion with every commitment resolved</strong>.</p>
+<p><img src="assets/05-conclusion.png" alt="The actual completed status shows AUTHOR-APPROVED CONCLUSION, Ending: resolved, and zero unresolved commitments."></p>
+<p><em>Your completion check: <strong>AUTHOR-APPROVED CONCLUSION</strong>, <strong>Ending: resolved</strong>, and <strong>Unresolved commitments · 0</strong>.</em></p>
+<p>The status now confirms the approved ending without asking you to approve it again.</p>
+<p>You did it: Mina has a desire, encounters a complication, acts because of it, and reaches an author-approved ending. The structured story saves locally. Select it again under <strong>Your stories</strong> to resume.</p>
+<h2 id="if-something-goes-wrong"><a class="header" href="#if-something-goes-wrong">If something goes wrong</a></h2>
+<p><strong>A preview says the wrong thing:</strong> before confirming, open <strong>Add detail or revise a binding</strong>, choose the relevant <strong>Revise:</strong> question, answer it, and use <strong>Continue to preview</strong> again. Read the corrected preview before confirming. This correction path was tested with the goal wording.</p>
+<p><strong>You approved an ending too soon:</strong> choose <strong>↶ Undo last decision</strong>. It reopens the last approved ending while retaining its history. You can inspect the story and approve the conclusion again. This recovery was also tested. Undo affects the latest accepted decision; it is not a general editor for any earlier decision.</p>
+<h2 id="make-one-small-change"><a class="header" href="#make-one-small-change">Make one small change</a></h2>
+<p>Optional variation: start a new version in which Mina finds the tear <strong>before</strong> setting out. Change the discovery wording and consider whether the same repair still follows. This variation is a creative invitation, not another verified step-by-step tutorial. You decide what changes the story’s meaning.</p>
+<p>Continue with <a href="#a-richer-story">the larger-story working method</a> and <a href="#the-impossible-letter">the Maya mystery workshop</a> when you are ready to hold several goals and a deliberate loose end together.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="characters-intentions-and-events"><a class="header" href="#characters-intentions-and-events">Characters, Intentions, and Events</a></h1>
+<p><strong>Edition:</strong> English · <a href="bn/topics/characters.html">বাংলা</a></p>
+<p><strong>Outline — not a completed tutorial.</strong></p>
+<p><strong>Envisioned chapter.</strong></p>
+<p>We will explore how a person’s desire gives events significance, and how a complication changes what they can do. The first umbrella exercise already introduces a character, goal and events; a richer lesson remains to be written and tested.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="connections-and-consequences"><a class="header" href="#connections-and-consequences">Connections and Consequences</a></h1>
+<p><strong>Edition:</strong> English · <a href="bn/topics/connections.html">বাংলা</a></p>
+<p><strong>Outline — not a completed tutorial.</strong></p>
+<p><strong>Envisioned chapter.</strong></p>
+<p>We will distinguish an event that merely follows another from an event that happens because of it. The umbrella lesson includes one explicit cause connection. Later examples will ask which consequences the author wants to preserve.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="questions-and-creative-choices"><a class="header" href="#questions-and-creative-choices">Questions and Creative Choices</a></h1>
+<p><strong>Edition:</strong> English · <a href="bn/topics/questions.html">বাংলা</a></p>
+<p><strong>Outline — not a completed tutorial.</strong></p>
+<p><strong>Envisioned chapter.</strong></p>
+<p>The intended experience asks consequential questions without interrupting every creative choice. A writer should be able to clarify, defer or reframe a question and retain authority over what becomes true. A complete lesson on these choices is not yet available.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="a-richer-story"><a class="header" href="#a-richer-story">“A Richer Story”</a></h1>
+<p><strong>Edition:</strong> English · <a href="bn/topics/richer-story.html">বাংলা</a></p>
+<p><strong>Available — working method verified with the Maya mystery on 8 November 2026.</strong></p>
+<p>A larger story asks you to hold several intentions at once. Our next exercise, <em>The Letter That Arrived Three Years Late</em>, gives Maya a practical danger to investigate, Nila a reason to resist her, and a question we deliberately leave unanswered. We construct these commitments rather than ask the app to invent a plot for us.</p>
+<h2 id="keep-three-kinds-of-notes-apart"><a class="header" href="#keep-three-kinds-of-notes-apart">Keep three kinds of notes apart</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>What you mean</th><th>Where to put it in this exercise</th></tr>
+</thead>
+<tbody>
+<tr><td>Something established in the story world</td><td>A concrete fact with <strong>objective</strong> scope, or an explicitly authored event</td></tr>
+<tr><td>Something a character suspects</td><td>A proposition with <strong>belief</strong> scope and its holder; it may be false</td></tr>
+<tr><td>An alternative you have not chosen</td><td><strong>Author notes</strong>, or a draft you revise/cancel before confirmation</td></tr>
+<tr><td>A question the ending should acknowledge</td><td>An explicit goal left unresolved; a note alone is not a listed commitment</td></tr>
+</tbody>
+</table>
+</div>
+<p>The story’s construction order is our working order. It is not a scene list, reader chronology or automatic prose outline. Even <strong>reader</strong> scope records a distinct assertion; it is not a complete revelation scheduler.</p>
+<h2 id="the-repeatable-control-pattern"><a class="header" href="#the-repeatable-control-pattern">The repeatable control pattern</a></h2>
+<ol>
+<li>Choose an intention, such as <strong>Expand</strong>, <strong>Reveal</strong>, <strong>Escalate</strong>, <strong>Connect</strong>, <strong>Redirect</strong>, or <strong>Resolve</strong>. These select available mechanisms; they do not evaluate the dramatic effect of your writing.</li>
+<li>Choose the specified mechanism. Answer the immediate question and select <strong>Continue to preview</strong>. Repeat until <strong>Proposed meaning</strong> appears; that button can lead to another question first.</li>
+<li>For a listed field not asked directly, open <strong>Add detail or revise a binding</strong>. Choose <strong>Optional:</strong> followed by its prompt, or <strong>Revise:</strong> if it already has an inferred/supplied answer. Enter or select its value, then <strong>Continue to preview</strong>. Repeat for the remaining fields. Fields inferred correctly need no resubmission.</li>
+<li>For a single existing entity, select its displayed name. For several participants or related commitments, select all named entries in the multi-select (use Cmd on macOS or Ctrl on Windows/Linux for separate entries). For a proposition whose value is a person, choose <strong>Choose an existing entity instead</strong> and select that person. If already in entity mode, select directly. Use <strong>Use a literal value instead</strong> for plain text.</li>
+<li>Read the whole preview, including actor, cause and goal bindings. Inferences are proposals; an incidental character name can bind the wrong actor. Revise it before <strong>Confirm this development</strong>. Text naming someone does not guarantee the intended structural relationship.</li>
+<li>Confirm only when meaning matches your decision. The graph changes at confirmation. To abandon an idea, use <strong>Cancel this development</strong>. To change a preview, revise it; do not confirm and hope to edit it later.</li>
+</ol>
+<p>The detailed exercise gives every value needed. A reference to an earlier step means select that existing element, preserving identity. Selectors may show a type beside a label; this matters when Fact, Proposition and Belief labels look alike. The inspector shows <strong>truth</strong> and <strong>active</strong> for belief records; <code>false</code> is not the same as a missing belief.</p>
+<h2 id="watch-the-cost-of-expressing-an-idea"><a class="header" href="#watch-the-cost-of-expressing-an-idea">Watch the cost of expressing an idea</a></h2>
+<p>The verified workshop contains 19 semantic developments plus a separate ending approval. For those 19, the app recorded <strong>158 author responses in English and 156 in Bangla</strong>, with a median of <strong>7 per development</strong> in either language. Those counters include intention/mechanism choices, supplied answers, optional-field selection, corrections and confirmation. They are not a count of questions alone or an estimate of writing time.</p>
+<p>The preview revision exercise deliberately adds work. The meaningful decision “share a redacted copy” took 13 recorded responses and 20 instrumented control actions, including the rejected draft. The final resolution needed 11 recorded responses in English and 9 in Bangla; the English wording initially inferred the wrong actor, which was corrected before confirmation. Semantic accuracy was preserved, at a visible interaction cost.</p>
+<p>Instrumented control actions count one text entry or multi-select operation as one action, not each keystroke or physical click. Recovery, the rejected cycle experiment, metadata setup and inspection are reported separately from the main construction. These are two automated rehearsals of one authored story, not a study of novice writers.</p>
+<h2 id="watch-the-network-grow"><a class="header" href="#watch-the-network-grow">Watch the network grow</a></h2>
+<p>After the first six developments there are 7 nodes; after the conflict there are 17; the approved ending has <strong>24 nodes and 49 connections</strong>. Some are support records for facts and belief changes, not additional plot beats. Do not equate node count with story richness.</p>
+<p><img src="assets/m8/01-premise.png" alt="The real early workspace after Maya’s main goal is established."></p>
+<p>In the final whole-network view, long labels become too small to read comfortably. Fit remains useful for orientation; the inspector and explicit connections are useful for reading. Arrange can move elements between layouts, so screen position is not a durable story reference. This is observed friction in a modest sample, not proof that hierarchy is the only solution. Existing focused subjourneys are a separate capability; this exercise stays in one workspace to observe the current flat network.</p>
+<p>Continue directly to <a href="#the-impossible-letter">The Impossible Letter</a> for the complete construction. The intervening time chapter remains a conceptual outline; it is not a prerequisite or an available timeline control.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="time-knowledge-and-revelation"><a class="header" href="#time-knowledge-and-revelation">Time, Knowledge, and Revelation</a></h1>
+<p><strong>Edition:</strong> English · <a href="bn/topics/time.html">বাংলা</a></p>
+<p><strong>Outline — not a completed tutorial.</strong></p>
+<p><strong>Envisioned chapter.</strong></p>
+<p>Story-world chronology, the order in which readers learn things, and what a character believes can differ deliberately. The envisioned timeline is a view of the same story, not a separate story the writer must keep synchronized. No timeline control is available in the verified build.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="the-impossible-letter"><a class="header" href="#the-impossible-letter">“The Impossible Letter”</a></h1>
+<p><strong>Edition:</strong> English · <a href="bn/topics/impossible-letter.html">বাংলা</a></p>
+<p><strong>Available — complete construction exercise verified in the private application on 8 November 2026.</strong></p>
+<h2 id="the-letter-that-arrived-three-years-late"><a class="header" href="#the-letter-that-arrived-three-years-late">The Letter That Arrived Three Years Late</a></h2>
+<p>Three years after Arif’s death, his wife Maya receives a sealed letter in handwriting resembling his. It warns that the lower ward will flood at the next floodgate pressure test. Courier Nila knows more than she admits. Her brother supplied confidential maintenance records, and publishing the original letter could identify him.</p>
+<p>This is an author’s workshop, with spoilers. We will choose a grounded explanation, not ask Studio to solve the mystery. Nila sent an old, genuine warning when a new test was announced. Maya must find evidence she can use without exposing the informant. An unexplained blue star on the envelope will remain open.</p>
+<p>Complete <a href="#your-first-tiny-story">the tiny story</a> first, then read <a href="#a-richer-story">the larger-story working method</a>. The result here is a structured narrative network, not prose, a sequence of scenes, or a reader-facing revelation schedule. Everything below is built with current controls; no hierarchical regrouping is required.</p>
+<h2 id="before-the-first-development"><a class="header" href="#before-the-first-development">Before the first development</a></h2>
+<p>Start a new story named <strong>The Letter That Arrived Three Years Late</strong>. If necessary, choose <strong>English</strong> from <strong>অ্যাপের ভাষা</strong> / <strong>Interface language</strong>. In <strong>Story Properties</strong>, keep <strong>Story language → English</strong>. In <strong>Author notes</strong>, write: “Build a scaffold, not prose. Deliberately leave the blue-star sender unresolved.” Save the properties.</p>
+<p>Follow the numbered developments in order. Each begins with the indicated intention and mechanism. Enter all listed fields using the <a href="#a-richer-story">larger-story working method</a>; some will already be inferred. References such as “step 5” mean select the existing element, not type those words or create it again. Character, Proposition, Fact and Belief types distinguish similar labels in selectors. Keep the predicate and entity choices identical when a later step refers to the same proposition.</p>
+<h2 id="1-establish-the-impossible-arrival"><a class="header" href="#1-establish-the-impossible-arrival">1. Establish the impossible arrival</a></h2>
+<p>We establish the death as an objective story fact. Resembling Arif’s handwriting is evidence to investigate, not proof that a dead man wrote yesterday. Maya’s goal makes the warning matter to people beyond her grief.</p>
+<h3 id="1-introduce-maya"><a class="header" href="#1-introduce-maya">1. Introduce Maya</a></h3>
+<p>Choose <strong>Expand → Introduce a person, place, object, or resource</strong>.</p>
+<ul>
+<li><strong>What are you introducing?</strong> — Character</li>
+<li><strong>What distinguishes it? Give it a name.</strong> — Maya</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h3 id="2-remember-arif"><a class="header" href="#2-remember-arif">2. Remember Arif</a></h3>
+<p>Choose <strong>Expand → Introduce a person, place, object, or resource</strong>.</p>
+<ul>
+<li><strong>What are you introducing?</strong> — Character</li>
+<li><strong>What distinguishes it? Give it a name.</strong> — Arif</li>
+<li><strong>What context should be retained?</strong> — Maya’s husband; he died three years before the letter arrived.</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h3 id="3-keep-the-warning-concrete"><a class="header" href="#3-keep-the-warning-concrete">3. Keep the warning concrete</a></h3>
+<p>Choose <strong>Expand → Introduce a person, place, object, or resource</strong>.</p>
+<ul>
+<li><strong>What are you introducing?</strong> — Object</li>
+<li><strong>What distinguishes it? Give it a name.</strong> — The sealed letter</li>
+<li><strong>What context should be retained?</strong> — Handwriting resembling Arif’s warns: at the next floodgate pressure test, the lower ward will flood.</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h3 id="4-establish-the-death-as-fact"><a class="header" href="#4-establish-the-death-as-fact">4. Establish the death as fact</a></h3>
+<p>Choose <strong>Reveal → Establish a concrete fact or belief</strong>.</p>
+<ul>
+<li><strong>Who or what is the proposition about?</strong> — Arif (step 2)</li>
+<li><strong>What is asserted about it?</strong> — died</li>
+<li><strong>What is the value or related entity?</strong> — three years before the letter arrived</li>
+<li><strong>Who can treat this as known?</strong> — objective</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h3 id="5-the-letter-arrives"><a class="header" href="#5-the-letter-arrives">5. The letter arrives</a></h3>
+<p>Choose <strong>Expand → Another specific occurrence</strong>.</p>
+<ul>
+<li><strong>What happened?</strong> — Maya receives the sealed letter three years after Arif’s death.</li>
+<li><strong>Who or what initiated it?</strong> — Maya (step 1)</li>
+<li><strong>Who or what is affected?</strong> — The sealed letter (step 3)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h3 id="6-give-maya-a-goal-beyond-grief"><a class="header" href="#6-give-maya-a-goal-beyond-grief">6. Give Maya a goal beyond grief</a></h3>
+<p>Choose <strong>Deepen → Establish a goal or motivation</strong>.</p>
+<ul>
+<li><strong>Whose goal is this?</strong> — Maya (step 1)</li>
+<li><strong>What do they want to achieve?</strong> — Get the lower ward warned and the dangerous pressure test stopped.</li>
+<li><strong>Who or what does the goal concern?</strong> — The sealed letter (step 3)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<p><strong>Check:</strong> seven graph nodes and one unresolved goal.</p>
+<h2 id="2-let-suspicion-acquire-a-cost"><a class="header" href="#2-let-suspicion-acquire-a-cost">2. Let suspicion acquire a cost</a></h2>
+<p>The courier stamp points toward Nila but does not prove forgery. We deliberately give Maya a mistaken belief. Nila’s wish to protect her brother is a competing motivation, not evidence that she is a villain. The blue-star question becomes an explicit goal so that the ending can acknowledge it.</p>
+<h3 id="7-find-a-misleading-stamp"><a class="header" href="#7-find-a-misleading-stamp">7. Find a misleading stamp</a></h3>
+<p>Choose <strong>Reveal → Another specific occurrence</strong>.</p>
+<ul>
+<li><strong>What happened?</strong> — Maya finds Nila’s new courier stamp beside an unexplained blue star on the envelope.</li>
+<li><strong>Who or what initiated it?</strong> — Maya (step 1)</li>
+<li><strong>Who or what is affected?</strong> — The sealed letter (step 3)</li>
+<li><strong>Which earlier event causes this?</strong> — Maya receives the sealed letter three years after Arif’s death. (step 5)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h3 id="8-name-the-question-we-will-leave-open"><a class="header" href="#8-name-the-question-we-will-leave-open">8. Name the question we will leave open</a></h3>
+<p>Choose <strong>Deepen → Establish a goal or motivation</strong>.</p>
+<ul>
+<li><strong>Whose goal is this?</strong> — Maya (step 1)</li>
+<li><strong>What do they want to achieve?</strong> — Find out who added the blue star to the envelope.</li>
+<li><strong>Who or what does the goal concern?</strong> — The sealed letter (step 3)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h3 id="9-introduce-nila"><a class="header" href="#9-introduce-nila">9. Introduce Nila</a></h3>
+<p>Choose <strong>Expand → Introduce a person, place, object, or resource</strong>.</p>
+<ul>
+<li><strong>What are you introducing?</strong> — Character</li>
+<li><strong>What distinguishes it? Give it a name.</strong> — Nila</li>
+<li><strong>What context should be retained?</strong> — A courier who once worked with Arif; her brother supplied confidential maintenance records.</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h3 id="10-connect-maya-and-arif"><a class="header" href="#10-connect-maya-and-arif">10. Connect Maya and Arif</a></h3>
+<p>Choose <strong>Connect → Establish a relationship</strong>.</p>
+<ul>
+<li><strong>Who is the relationship from?</strong> — Maya (step 1)</li>
+<li><strong>How do they relate?</strong> — was married to</li>
+<li><strong>Who is the relationship to?</strong> — Arif (step 2)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h3 id="11-give-nila-a-competing-goal"><a class="header" href="#11-give-nila-a-competing-goal">11. Give Nila a competing goal</a></h3>
+<p>Choose <strong>Deepen → Establish a goal or motivation</strong>.</p>
+<ul>
+<li><strong>Whose goal is this?</strong> — Nila (step 9)</li>
+<li><strong>What do they want to achieve?</strong> — Keep her brother’s identity out of the published evidence.</li>
+<li><strong>Who or what does the goal concern?</strong> — The sealed letter (step 3)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h3 id="12-let-maya-suspect-forgery"><a class="header" href="#12-let-maya-suspect-forgery">12. Let Maya suspect forgery</a></h3>
+<p>Choose <strong>Reveal → Establish a concrete fact or belief</strong>.</p>
+<ul>
+<li><strong>Who or what is the proposition about?</strong> — The sealed letter (step 3)</li>
+<li><strong>What is asserted about it?</strong> — was forged by</li>
+<li><strong>What is the value or related entity?</strong> — Choose an existing entity: Nila (step 9)</li>
+<li><strong>Who can treat this as known?</strong> — belief</li>
+<li><strong>Who holds the belief?</strong> — Maya (step 1)</li>
+<li><strong>Which event establishes or reveals it?</strong> — Maya finds Nila’s new courier stamp beside an unexplained blue star on the envelope. (step 7)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<p>This creates a proposition, Maya’s active belief, and its acquisition at the stamp discovery. It does <strong>not</strong> establish objective forgery.</p>
+<h2 id="3-make-the-conflict-specific"><a class="header" href="#3-make-the-conflict-specific">3. Make the conflict specific</a></h2>
+<p>An earlier test creates urgency, but urgency alone is not a structured conflict. Bind the two people and their goals to the disagreement about publishing the letter. The warning and confidentiality can both matter; decide whether this tension is convincing in your own version.</p>
+<h3 id="13-bring-the-test-forward"><a class="header" href="#13-bring-the-test-forward">13. Bring the test forward</a></h3>
+<p>Choose <strong>Escalate → A character acts or decides</strong>.</p>
+<ul>
+<li><strong>Who acts?</strong> — Nila (step 9)</li>
+<li><strong>What do they do?</strong> — Nila tells Maya that officials have moved the floodgate pressure test forward to tonight.</li>
+<li><strong>Which event must precede this?</strong> — Maya receives the sealed letter three years after Arif’s death. (step 5)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h3 id="14-bind-the-conflict-to-people-and-goals"><a class="header" href="#14-bind-the-conflict-to-people-and-goals">14. Bind the conflict to people and goals</a></h3>
+<p>Choose <strong>Escalate → Establish specific competing commitments</strong>.</p>
+<ul>
+<li><strong>What makes the commitments incompatible?</strong> — Maya needs to publish credible warning evidence, but the original letter exposes Nila’s brother; Nila refuses its publication.</li>
+<li><strong>Who is involved?</strong> — Maya (step 1); Nila (step 9)</li>
+<li><strong>What is contested?</strong> — The sealed letter (step 3)</li>
+<li><strong>Which goals compete?</strong> — Get the lower ward warned and the dangerous pressure test stopped. (step 6); Keep her brother’s identity out of the published evidence. (step 11)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<p><strong>Check:</strong> the conflict has both participants and both goals; the blue-star goal remains separate. The moved deadline is authored context, not an automatic calendar calculation.</p>
+<p><img src="assets/m8/03-conflict.png" alt="The real workspace after the competing goals are explicitly connected to the conflict."></p>
+<h2 id="4-choose-what-evidence-to-trust-and-share"><a class="header" href="#4-choose-what-evidence-to-trust-and-share">4. Choose what evidence to trust and share</a></h2>
+<p>The carbon copy supplies a grounded explanation: Arif warned about the next test, not a date known from beyond the grave. Nila delayed sending his real letter until a test was announced. Record the objective denial of forgery separately from Maya’s belief correction. The software will not silently change her mind for you.</p>
+<h3 id="15-find-a-dated-carbon-copy"><a class="header" href="#15-find-a-dated-carbon-copy">15. Find a dated carbon copy</a></h3>
+<p>Choose <strong>Expand → A character acts or decides</strong>.</p>
+<ul>
+<li><strong>Who acts?</strong> — Maya (step 1)</li>
+<li><strong>What do they do?</strong> — Maya finds Arif’s dated carbon copy: he predicted the next pressure-test failure from neglected repairs; Nila sent his old letter when the test was announced.</li>
+<li><strong>Which earlier event causes this?</strong> — Nila tells Maya that officials have moved the floodgate pressure test forward to tonight. (step 13)</li>
+<li><strong>Who or what is affected?</strong> — The sealed letter (step 3)</li>
+<li><strong>Which goal does it serve or obstruct?</strong> — Get the lower ward warned and the dangerous pressure test stopped. (step 6)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h3 id="16-record-evidence-against-forgery"><a class="header" href="#16-record-evidence-against-forgery">16. Record evidence against forgery</a></h3>
+<p>Choose <strong>Reveal → Establish a concrete fact or belief</strong>.</p>
+<ul>
+<li><strong>Who or what is the proposition about?</strong> — The sealed letter (step 3)</li>
+<li><strong>What is asserted about it?</strong> — was forged by</li>
+<li><strong>What is the value or related entity?</strong> — Choose an existing entity: Nila (step 9)</li>
+<li><strong>Who can treat this as known?</strong> — objective</li>
+<li><strong>Is this proposition affirmed or denied?</strong> — denied</li>
+<li><strong>Which event establishes or reveals it?</strong> — Maya finds Arif’s dated carbon copy: he predicted the next pressure-test failure from neglected repairs; Nila sent his old letter when the test was announced. (step 15)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<p>Reuse the same letter, predicate and Nila entity from step 12. <strong>denied</strong> negates forgery; it does not deny Arif’s death. The prior belief remains active until the next step.</p>
+<h3 id="17-let-maya-change-her-mind"><a class="header" href="#17-let-maya-change-her-mind">17. Let Maya change her mind</a></h3>
+<p>Choose <strong>Reveal → Acquire, withdraw, or correct a belief</strong>.</p>
+<ul>
+<li><strong>How does the belief change?</strong> — correct</li>
+<li><strong>Whose belief changes?</strong> — Maya (step 1)</li>
+<li><strong>At which story event does it change?</strong> — Maya finds Arif’s dated carbon copy: he predicted the next pressure-test failure from neglected repairs; Nila sent his old letter when the test was announced. (step 15)</li>
+<li><strong>Which proposition is acquired or replaces the old belief?</strong> — Proposition (step 12)</li>
+<li><strong>Which existing belief is withdrawn or corrected?</strong> — Belief (step 12)</li>
+<li><strong>Is the new belief affirmed or denied?</strong> — denied</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<p>The previous belief becomes inactive; its record survives. The new belief denies the same forgery proposition. Its label alone can look similar: inspect <strong>truth</strong> and <strong>active</strong> as well.</p>
+<h3 id="18-share-evidence-at-a-cost"><a class="header" href="#18-share-evidence-at-a-cost">18. Share evidence at a cost</a></h3>
+<p>Choose <strong>Redirect → A character acts or decides</strong>.</p>
+<p>For a safe revision exercise, first enter the following draft under <strong>What do they do?</strong>, continue to the preview, then revise that binding before confirming:</p>
+<blockquote>
+<p>Maya publishes the unredacted letter and exposes Nila’s brother.</p>
+</blockquote>
+<p>Replace it with the final action below. The first version is an alternative you reject, not an event that happens in this story.</p>
+<ul>
+<li><strong>Who acts?</strong> — Maya (step 1)</li>
+<li><strong>What do they do?</strong> — Maya gives engineers the dated carbon copy with the informant code redacted, accepting that she cannot publicly name her source.</li>
+<li><strong>Which earlier event causes this?</strong> — Maya finds Arif’s dated carbon copy: he predicted the next pressure-test failure from neglected repairs; Nila sent his old letter when the test was announced. (step 15)</li>
+<li><strong>Who or what is affected?</strong> — The sealed letter (step 3)</li>
+<li><strong>Which goal does it serve or obstruct?</strong> — Get the lower ward warned and the dangerous pressure test stopped. (step 6)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<p><img src="assets/m8/05-choice-preview.png" alt="The actual revised decision preview retains the cause, affected letter and goal."></p>
+<h2 id="5-resolve-the-danger-keep-one-question-open"><a class="header" href="#5-resolve-the-danger-keep-one-question-open">5. Resolve the danger; keep one question open</a></h2>
+<p>The engineers stop the test because Maya shares usable evidence. We explicitly mark the safety goal, the confidentiality goal and their conflict resolved together. This records our chosen outcome; Studio does not inspect engineering evidence or judge whether the compromise is persuasive. The blue star remains unexplained by choice.</p>
+<h3 id="19-stop-the-test-and-protect-the-source"><a class="header" href="#19-stop-the-test-and-protect-the-source">19. Stop the test and protect the source</a></h3>
+<p>Choose <strong>Resolve → Resolve a commitment through a specific development</strong>.</p>
+<ul>
+<li><strong>What commitment is resolved?</strong> — Get the lower ward warned and the dangerous pressure test stopped. (step 6)</li>
+<li><strong>What happens to resolve it?</strong> — Engineers verify the old repair defect, stop tonight’s test and warn the lower ward; the published copy protects Nila’s brother.</li>
+<li><strong>Who brings this about?</strong> — Maya (step 1)</li>
+<li><strong>Which event enables the resolution?</strong> — Maya gives engineers the dated carbon copy with the informant code redacted, accepting that she cannot publicly name her source. (step 18)</li>
+<li><strong>Which related commitments are resolved by the same development?</strong> — Keep her brother’s identity out of the published evidence. (step 11); Maya needs to publish credible warning evidence, but the original letter exposes Nila’s brother; Nila refuses its publication. (step 14)</li>
+</ul>
+<p>Review the proposed meaning and bindings, then <strong>Confirm this development</strong>.</p>
+<h2 id="approve-an-ending-with-one-deliberate-loose-end"><a class="header" href="#approve-an-ending-with-one-deliberate-loose-end">Approve an ending with one deliberate loose end</a></h2>
+<p>There should now be one unresolved commitment: <strong>Find out who added the blue star to the envelope.</strong> The other goals and their conflict are resolved. Choose <strong>Conclude</strong>, then <strong>Approve an intentionally ambiguous ending; leave listed commitments open</strong>. The closed-ending choice is unavailable while that goal remains.</p>
+<p>Check <strong>AUTHOR-APPROVED CONCLUSION</strong>, <strong>Ending: intentionally open</strong>, and one unresolved commitment. This ending closes the danger plot and accepts the unanswered sender question. It does not create a portable cross-story hook or a finished prose ending.</p>
+<p><img src="assets/m8/07-open-ending.png" alt="The real completed network with one author-approved open thread."></p>
+<h2 id="recover-a-decision-without-rewriting-history"><a class="header" href="#recover-a-decision-without-rewriting-history">Recover a decision without rewriting history</a></h2>
+<p>Before approving the ending, you can test <strong>↶ Undo last decision</strong> immediately after step 19. It removes that resolution and restores four commitments: the safety goal, privacy goal, conflict and blue-star goal. The undone record remains. Repeat step 19, using its original bindings, then approve the intentionally open ending. This exact recovery was tested. There is no redo button or unrestricted earlier-node editor; do not treat Undo as one.</p>
+<h2 id="follow-a-distant-connection"><a class="header" href="#follow-a-distant-connection">Follow a distant connection</a></h2>
+<p>After approval, use <strong>Or select a story element</strong> to select Maya’s redaction decision from step 18. In the inspector, follow the connection to the carbon-copy discovery from step 15; the <strong>CAUSES</strong> connection leads back to the discovery that made the decision possible. The inspector lists relation names and neighbors without labeling incoming/outgoing direction; use the graph arrows or the explicit bindings from steps 15 and 18 to verify direction. The stamp discovery and arrival are other branches; not every earlier event caused every later one.</p>
+<p><img src="assets/m8/08-inspector.png" alt="The real inspector displays the decision and its explicit connections."></p>
+<p>The inspector also retains <strong>original_text</strong>, including the rejected first draft from step 18. That is provenance, not another event. The confirmed label and <strong>action</strong> contain the redacted-copy decision.</p>
+<p>The element picker disappears once an element is selected. You can follow connection buttons or click graph nodes; reload to reset selection and bring back the picker. <strong>Fit</strong> shows the whole network; zoom in or use the inspector for full wording. <strong>Arrange</strong> changes the layout, not the story. Returning to a saved story preserves the graph and approved ending.</p>
+<h2 id="try-an-authors-alternative"><a class="header" href="#try-an-authors-alternative">Try an author’s alternative</a></h2>
+<p>What if Maya refused to protect the informant? What if Nila sent a copy instead of the original? These are possible new versions, not facts in this verified version. Try a separate story so you do not need to rewrite older accepted decisions. If you make the blue-star sender known, resolve that goal explicitly before asking for a fully closed ending. You decide whether the explanation is satisfying; Studio records the commitments you approve.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="from-scaffold-to-prose"><a class="header" href="#from-scaffold-to-prose">From Scaffold to Prose</a></h1>
+<p><strong>Edition:</strong> English · <a href="bn/topics/prose.html">বাংলা</a></p>
+<p><strong>Outline — not a completed tutorial.</strong></p>
+<p><strong>Envisioned chapter.</strong></p>
+<p>The envisioned loop is an author-approved scaffold, creative elaboration, review of welcome and unwelcome inventions, and revision. A suggested sentence should not silently establish a new fact. The current private app does not integrate scaffold export, LLM prose generation, prose editing, invention review or final-prose persistence. This chapter is an outline, not a list of buttons you can use now.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="your-own-story"><a class="header" href="#your-own-story">Your Own Story</a></h1>
+<p><strong>Edition:</strong> English · <a href="bn/topics/your-story.html">বাংলা</a></p>
+<p><strong>Outline — not a completed tutorial.</strong></p>
+<p><strong>Envisioned chapter.</strong></p>
+<p>The destination is a story that begins with your own idea. We want the structure to support your imagination without making you become a prompt engineer. A future guided session will help you decide what must stay fixed and what can surprise you. The complete end-to-end prose journey is envisioned, not demonstrated here.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>

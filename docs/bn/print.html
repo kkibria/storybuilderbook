@@ -1,0 +1,617 @@
+<!DOCTYPE HTML>
+<html lang="bn" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>স্টোরি স্টুডিও — লেখকের সঙ্গী</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="bangla-52ebde5a.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-70f54662.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-f808dc83.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">স্টোরি স্টুডিও — লেখকের সঙ্গী</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="সটোরি-সটুডিওতে-সবাগতম"><a class="header" href="#সটোরি-সটুডিওতে-সবাগতম">“স্টোরি স্টুডিওতে স্বাগতম”</a></h1>
+<p><strong>ভাষা:</strong> <a href="../index.html">English</a> · বাংলা</p>
+<p>একটা প্রতিশ্রুতি, একটা দৃশ্য, কিংবা মাথা থেকে সরাতে পারছেন না এমন প্রশ্ন—যেকোনো কিছু থেকেই গল্প শুরু হতে পারে। স্টোরি স্টুডিওতে আমরা এমন একটা কাজের জায়গা খুঁজছি, যেখানে সেই শুরুটা বড় করা যায়, অথচ গল্পের মালিক থাকেন আপনিই।</p>
+<p>এই প্রকাশ্য বইয়ে আছে <strong>লেখকের জন্য আমরা যে অভিজ্ঞতা গড়ে তুলতে চাই</strong>, আর তার মধ্যে এখন কোনগুলো দেখানো যায়। স্টুডিও অ্যাপটি এখনও <strong>ব্যক্তিগত কম্পিউটারে চালানো, পরীক্ষামূলক একটি অ্যাপ</strong>। বই প্রকাশ হয়েছে মানেই অ্যাপ সবার জন্য ছাড়া হয়েছে, ডাউনলোড করা যায়, বা সহায়তার নিশ্চয়তা আছে—এমন নয়। অ্যাপের প্রকাশের তারিখও এখানে ঘোষণা করা হচ্ছে না।</p>
+<p>কোনটা জরুরি, কোনটা গল্পের সত্যি, আর কোনটা খোলা থাকবে—সিদ্ধান্ত আপনার। ভাবনাটা এমন: আপনি কল্পনা করবেন, স্টুডিও সাজাতে সাহায্য করবে, কোনো ভাষামডেল গল্পটাকে গদ্যে ফুটিয়ে তুলতে পারে, তারপর কী রাখবেন সেটা আপনি ঠিক করবেন। ভালো চমক গল্পকে সমৃদ্ধ করতে পারে; গল্পের দখল নিতে পারে না।</p>
+<h2 id="কোনটা-এখন-আছে-বুঝবেন-কীভাবে"><a class="header" href="#কোনটা-এখন-আছে-বুঝবেন-কীভাবে">কোনটা এখন আছে বুঝবেন কীভাবে</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>চিহ্ন</th><th>এই বইয়ে তার মানে</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>এখন আছে (Available)</strong></td><td>এখনও প্রকাশ না-করা পরীক্ষামূলক অ্যাপে যাচাই করা হয়েছে। সবার জন্য অ্যাপ পাওয়া যাচ্ছে—এটা বোঝায় না।</td></tr>
+<tr><td><strong>পরীক্ষামূলক নমুনা (Prototype)</strong></td><td>পরীক্ষায় দেখানো হয়েছে; সীমাবদ্ধতা আর আলাদা সরঞ্জাম লাগলে তা বলা থাকবে।</td></tr>
+<tr><td><strong>পরিকল্পনায় (Envisioned)</strong></td><td>ভবিষ্যতের ভাবনা বা নকশা; এখনকার কোনো বোতাম নয়।</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>রূপরেখা</strong> মানে ভবিষ্যৎ অধ্যায়ের ধারণা, পুরো শেখার পাঠ নয়। কোনো সুবিধা আছে কি না, আর অধ্যায়টি সম্পূর্ণ কি না—এ দুটো আলাদা কথা।</p>
+<p>প্রথম তিনটি অধ্যায় এই বইয়ের শুরুর ভিত্তি। <a href="#লেখকের-কাজের-জায়গা">কাজের জায়গা</a> চিনে নিন, তারপর <a href="#আপনার-পরথম-ছোটট-গলপ">ছোট্ট গল্পের পাঠে</a> সত্যিকারের বোতাম ব্যবহার করে শুরু থেকে অনুমোদিত সমাপ্তি পর্যন্ত যান। এবার <a href="#আরেকটু-বড়-গলপ">বড় গল্পে কাজের পদ্ধতি</a> আর <a href="#অসমভব-চিঠি">মায়ার রহস্যগল্পের পাঠ</a> দিয়ে আরও এগোতে পারেন। বাকি পরের অধ্যায়গুলো এখনও ছোট রূপরেখা।</p>
+<p><strong>এখন আছে:</strong> ইংরেজি ও বাংলা ইন্টারফেস, আর তৈরি হয়ে যাওয়ার পরেও গল্পের তথ্য বদলানোর সুবিধা। অ্যাপের ভাষা আর গল্পের ভাষা আলাদা। আপনার নিজের লেখা নিজে থেকে অনুবাদ হবে না।</p>
+<p>পাঠ আর ছবিগুলো <strong>৮ নভেম্বর ২০২৬</strong> তারিখে ব্যক্তিগত সংস্করণে যাচাই করা হয়েছে। অ্যাপের ইংরেজি নাম এখনও <strong>Storybuilder · Narrative Workshop</strong>; বড় ভাবনাটার জন্য বইয়ে আমরা <strong>Story Studio</strong> নাম ব্যবহার করছি। ছবিগুলো নমুনা গল্প দিয়ে চালানো আসল অ্যাপের ছবি, বানানো নকশা নয়।</p>
+<p>বই পড়তে ব্যক্তিগত অ্যাপ লাগবে না। কিন্তু হাতে-কলমে করতে হলে আলাদাভাবে পাওয়া ব্যক্তিগত সংস্করণে প্রবেশাধিকার দরকার। বই সেই প্রবেশাধিকার দেয় না।</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="লেখকের-কাজের-জায়গা"><a class="header" href="#লেখকের-কাজের-জায়গা">“লেখকের কাজের জায়গা”</a></h1>
+<p><strong>ভাষা:</strong> <a href="../topics/workspace.html">English</a> · বাংলা</p>
+<p><strong>এখন আছে (Available) — যাচাই করা পরীক্ষামূলক সংস্করণের কাজের জায়গার পরিচয়।</strong></p>
+<p>লেখার আড়ালে গল্পটা ধরে রাখার জায়গা ভাবুন এটাকে: কে কী চায়, কী ঘটে, আর তার ফলে কী আসে। সংযোগচিত্রে সেই সম্পর্কগুলো দেখা যায়; সেটা পুরো গদ্য নয়।</p>
+<p><img src="assets/04-complete.png" alt="প্রথম পাঠ শেষ হওয়ার পর আসল বাংলা ইন্টারফেসে গল্পের দিক, সংযোগচিত্র আর অনুমোদিত সমাপ্তি।"></p>
+<p><em>প্রথম পাঠের পরে আসল কাজের জায়গা। ছোট লেখা দেখতে <a href="assets/04-complete.png">ছবিটা বড় করে খুলুন</a>।</em></p>
+<p>ওপরে <strong>আপনার গল্পগুলো</strong> থেকে সংরক্ষিত কাজ আবার খুলতে পারবেন। <strong>নতুন গল্প শুরু করুন</strong> আরেকটা গল্প তৈরি করে। নতুন গল্প ফাঁকা থাকে, যাতে মানুষ আর পরিস্থিতি আপনার ইচ্ছেমতো যোগ করতে পারেন।</p>
+<p><strong>অ্যাপের ভাষা</strong> থেকে English বা বাংলা বেছে নিলে বোতাম আর নির্দেশ বদলায়; আপনার গল্পের লেখা বদলায় না। গল্পের নামের পাশে <strong>গল্পের তথ্য</strong> খুলে নাম, উপশিরোনাম, সারাংশ, ধরন, গল্পের ভাষা আর লেখকের নোট বদলাতে পারেন। <strong>গল্পের ভাষা</strong> আর <strong>অ্যাপের ভাষা</strong> আলাদা পছন্দ।</p>
+<p>অ্যাপের ভাষা বা গল্পের ভাষা যা-ই বেছে নিন, ইউনিকোডে লেখা যায় এমন যেকোনো ভাষায় লিখতে পারেন। কোনো লেখা নিজে থেকে অনুবাদ হয় না।</p>
+<p><strong>গল্পের পথ</strong> থেকে বুঝতে পারবেন, গল্প তৈরির কোন পর্যায়ে আছেন। পাশে বেছে নিন এবার কী করতে চান: <strong>বিস্তার করুন</strong>, <strong>আরও গভীরে যান</strong>, <strong>জটিল করুন</strong>, <strong>জানতে দিন</strong>, <strong>যোগ করুন</strong>, <strong>মোড় ঘোরান</strong>, <strong>মীমাংসা করুন</strong>, বা <strong>শেষ করুন</strong>। নিচের অংশে সেই ভাবনাটা প্রকাশ করার উপায় আসে। প্রস্তাব দেখানোর আগে দরকারি কোনো তথ্য জানতে চাইতে পারে।</p>
+<p>প্রস্তাবের জায়গাটা আপনার দেখে নেওয়ার বিরতি। অর্থটা মেলে কি না পড়ুন, দরকারে পছন্দ বদলান, তারপরই নিশ্চিত করুন। নিশ্চিত করার পরে চিত্র বদলায়। <strong>↶ শেষ সিদ্ধান্ত ফিরিয়ে নিন</strong> দিয়ে সবচেয়ে সাম্প্রতিক গ্রহণ করা সিদ্ধান্ত ফেরানো যায়; যেকোনো পুরোনো জায়গা ইচ্ছেমতো সম্পাদনার বোতাম এটি নয়।</p>
+<p>বর্তমান অবস্থায় পরিস্থিতি আর এখনও না-মেটা বিষয় দেখা যায়। লক্ষ্য মেটানো আর গল্পের সমাপ্তি অনুমোদন আলাদা সিদ্ধান্ত। চাইলে সমাপ্তি খোলাও রাখতে পারেন; প্রথম পাঠে আমরা মিটে যাওয়া সমাপ্তি নেব।</p>
+<p><strong>পরিকল্পনায় (Envisioned) — বড় কাজের জায়গা।</strong> একই গল্প থেকে সময়রেখা দেখা, গাঁথুনি থেকে গদ্য চাওয়া, গদ্য সম্পাদনা আর নতুন প্রস্তাব পর্যালোচনার জায়গা আমাদের ভাবনায় আছে। যাচাই করা সংস্করণে এগুলো একসঙ্গে থাকা সুবিধা নয়। পরের রূপরেখাগুলো সম্ভাবনার কথা বলে, নেই এমন বোতাম খুঁজতে বলে না।</p>
+<p>গল্পের গাঁথুনি এই কম্পিউটারে সংরক্ষিত হয়। ব্রাউজার বন্ধ করা আর সংরক্ষিত গল্প মুছে ফেলা এক কথা নয়। এই ব্যবস্থায় এখনও চূড়ান্ত গদ্যপাণ্ডুলিপি সংরক্ষণের আলাদা সুবিধা নেই।</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="আপনার-পরথম-ছোটট-গলপ"><a class="header" href="#আপনার-পরথম-ছোটট-গলপ">“আপনার প্রথম ছোট্ট গল্প”</a></h1>
+<p><strong>ভাষা:</strong> <a href="../topics/first-story.html">English</a> · বাংলা</p>
+<p><strong>এখন আছে (Available) — ৮ নভেম্বর ২০২৬ তারিখে এখনও প্রকাশ না-করা পরীক্ষামূলক অ্যাপে পুরো পাঠ যাচাই করা হয়েছে।</strong></p>
+<p>বর্তমান পরীক্ষামূলক সংস্করণটি ব্রাউজারে খোলা থাকতে হবে। পাঠ শেষে পাবেন ছোট একটা <strong>গল্পের গাঁথুনি</strong>, নিজে থেকে তৈরি গদ্যপাণ্ডুলিপি নয়।</p>
+<h2 id="একটা-কথা-আর-ছেঁড়া-ছাতা"><a class="header" href="#একটা-কথা-আর-ছেঁড়া-ছাতা">একটা কথা আর ছেঁড়া ছাতা</a></h2>
+<p>মিনা কথা দিয়েছে, প্রতিবেশী বেরোনোর আগেই ধার করা ছাতাটা ফেরত দেবে। পথে দেখে ছাতার একটা জায়গা ছেঁড়া। সে জায়গাটা সেলাই করে সময়মতো ছাতা ফিরিয়ে দেয়। কথাটা রাখা হয়।</p>
+<p>মিনার একটা লক্ষ্য দেবেন, বাধাটা আনবেন, তার সঙ্গে মেরামতের ঘটনাটা যুক্ত করবেন, তারপর সমাপ্তি অনুমোদন করবেন। অনেক চরিত্র, বিস্তারিত জায়গা বা ঠিকঠাক তারিখ দেওয়ার দরকার নেই।</p>
+<h2 id="১-নতুন-গলপ-শুরু-করুন"><a class="header" href="#১-নতুন-গলপ-শুরু-করুন">১. নতুন গল্প শুরু করুন</a></h2>
+<p>অ্যাপের ভাষা যদি এখনও English থাকে, তাহলে <strong>Interface language</strong> থেকে <strong>বাংলা</strong> বেছে নিন। আগে থেকেই বাংলা থাকলে কিছু বদলানোর দরকার নেই। বাংলায় এই পছন্দটির নাম <strong>অ্যাপের ভাষা</strong>।</p>
+<p><img src="assets/01-language.png" alt="আসল বাংলা ইন্টারফেসে অ্যাপের ভাষা বেছে নেওয়ার জায়গা।"></p>
+<p><em>এই পছন্দ ব্রাউজারে মনে থাকবে। এতে আপনার লেখা বা গল্পের ভাষা বদলাবে না।</em></p>
+<p><strong>নতুন গল্প শুরু করুন</strong> খুলুন। <strong>গল্পের নাম</strong> দিন <strong>ছাতার খসড়া</strong>। <strong>শুরুর বীজসংখ্যা</strong> যেমন আছে তেমন রেখে <strong>গল্প তৈরি করুন ↗</strong> বেছে নিন।</p>
+<p><img src="assets/00-create.png" alt="আসল বাংলা নতুন-গল্প ফর্মে ছাতার খসড়া নাম, বীজসংখ্যা আর গল্প তৈরি করার বোতাম।"></p>
+<p><em>এই পাঠে বীজসংখ্যা নিয়ে সৃজনশীল সিদ্ধান্ত লাগবে না।</em></p>
+<p>ফাঁকা কাজের জায়গা খুলবে। গল্পের নামের পাশে <strong>গল্পের তথ্য</strong> বেছে নিন। <strong>গল্পের নাম</strong> বদলে <strong>ধার করা ছাতা</strong> দিন। চাইলে উপশিরোনাম, সারাংশ, ধরন আর লেখকের নোটও দিতে পারেন; বাধ্যতামূলক নয়। নমুনার উপশিরোনাম <strong>কথা রাখার ছোট গল্প</strong>।</p>
+<p><strong>গল্পের ভাষা</strong> থেকে <strong>বাংলা</strong> বেছে নিয়ে <strong>তথ্য সংরক্ষণ করুন</strong> চাপুন। নতুন গল্পের ভাষা এখন শুরুতে <strong>English</strong> থাকে, অ্যাপের ভাষা বাংলা হলেও। গল্পের ভাষা আলাদাভাবে বদলাতে পারেন।</p>
+<p><img src="assets/01-properties.png" alt="আসল গল্পের তথ্য ফর্মে নতুন নাম, বাংলা সারাংশ, গল্পের ভাষা আর লেখকের নোট।"></p>
+<p><em>নাম বদলালে নতুন গল্প তৈরি হয় না। তালিকা আর নাম আপডেট হয়। নিজের লেখা যেমন দেন তেমনই থাকে—নোটে English শব্দ থাকলেও।</em></p>
+<p>আবার <strong>গল্পের তথ্য</strong> খুলে বা পাতা নতুন করে খুলে দেখে নিতে পারেন। চাইলে কাজের মাঝেও অ্যাপের ভাষা English করে আবার বাংলায় ফিরুন; এমনকি এখনও সংরক্ষণ না-করা লেখাও থাকবে। নিচের নির্দেশের জন্য বাংলায় ফিরুন। তারপর দিকের বোতামগুলো থেকে <strong>বিস্তার করুন</strong> বেছে নিন।</p>
+<h2 id="২-মিনাকে-কিছু-চাইতে-দিন"><a class="header" href="#২-মিনাকে-কিছু-চাইতে-দিন">২. মিনাকে কিছু চাইতে দিন</a></h2>
+<p><strong>লক্ষ্য বা প্রেরণা দিন</strong> বেছে নিন।</p>
+<p><strong>এটা কার লক্ষ্য?</strong> প্রশ্নে <strong>নতুন কাউকে বা কিছু যোগ করুন…</strong> নিন। <strong>তার নাম কী?</strong> ঘরে লিখুন <strong>মিনা</strong>, তারপর <strong>চালিয়ে যান</strong>।</p>
+<p>পরের প্রশ্ন <strong>সে কী করতে চায়?</strong> এখানে লিখুন:</p>
+<blockquote>
+<p>প্রতিবেশী বেরোনোর আগে ধার করা ছাতা ফেরত দেওয়া</p>
+</blockquote>
+<p>আবার <strong>চালিয়ে যান</strong>। দরকারি প্রশ্ন বাকি থাকলে আগে সেগুলো আসে, তারপর প্রস্তাব দেখায়।</p>
+<p><img src="assets/02-goal-preview.png" alt="আসল বাংলা প্রস্তাবে নতুন চরিত্র মিনা আর তার ছাতা ফেরত দেওয়ার লক্ষ্য।"></p>
+<p><em>নিশ্চিত করার আগে অর্থটা দেখে নিন।</em></p>
+<p>মিনা আর তার ইচ্ছা ঠিক আছে কি না দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> বেছে নিন। চিত্রে মিনা আর লক্ষ্য আসবে। বর্তমান অবস্থায় একটা না-মেটা লক্ষ্য দেখাবে।</p>
+<h2 id="৩-একটা-বাধা-আসুক"><a class="header" href="#৩-একটা-বাধা-আসুক">৩. একটা বাধা আসুক</a></h2>
+<p><strong>বিস্তার করুন</strong> রেখেই <strong>আরেকটা নির্দিষ্ট ঘটনা</strong> নিন। <strong>কী ঘটেছিল?</strong> ঘরে লিখুন:</p>
+<blockquote>
+<p>মিনা ধার করা ছাতায় একটা ছেঁড়া জায়গা দেখতে পায়</p>
+</blockquote>
+<p><strong>চালিয়ে যান</strong>, ঘটনা পড়ুন, তারপর <strong>এই অগ্রগতি নিশ্চিত করুন</strong>। চিত্রে আবিষ্কারের ঘটনা আসবে। লক্ষ্য এখনও মেটেনি: ছেঁড়া দেখলেই তো কথা রাখা হয়ে যায় না।</p>
+<p>এটাই এই সংস্করণের সাধারণ ঘটনা যোগ করার বোতাম। এই ছোট পাঠে দ্বিতীয় চরিত্র বা আলাদা বস্তু হিসেবে ছাতা তৈরি করা লাগবে না।</p>
+<h2 id="৪-এবার-মিনা-কথা-রাখুক"><a class="header" href="#৪-এবার-মিনা-কথা-রাখুক">৪. এবার মিনা কথা রাখুক</a></h2>
+<p><strong>মীমাংসা করুন</strong>, তারপর <strong>নির্দিষ্ট ঘটনার মাধ্যমে একটা বিষয় মেটান</strong> নিন।</p>
+<p>এখানে একটা লক্ষ্যই বাকি, তাই প্রস্তাবে সেটা বেছে নেওয়া যেতে পারে। <strong>কী ঘটলে এটা মেটে?</strong> ঘরে লিখুন:</p>
+<blockquote>
+<p>মিনা ছাতার ছেঁড়া জায়গাটা সেলাই করে প্রতিবেশী বেরোনোর আগে ফেরত দেয়</p>
+</blockquote>
+<p><strong>চালিয়ে যান</strong>। লক্ষ্য হিসেবে মিনার আগের ইচ্ছাটাই আছে কি না দেখুন।</p>
+<p><strong>বাড়তি তথ্য দিন বা পছন্দ বদলান</strong> খুলে <strong>চাইলে বলুন: কোন ঘটনা থেকে এই মীমাংসা আসে?</strong> নিন। <strong>মিনা ধার করা ছাতায় একটা ছেঁড়া জায়গা দেখতে পায়</strong> বেছে <strong>চালিয়ে যান</strong> চাপুন। প্রস্তাব পড়ার সময় বাড়তি তথ্যের তালিকা গুটিয়ে নিতে পারেন।</p>
+<p><img src="assets/03-resolution-preview.png" alt="আসল বাংলা মীমাংসার প্রস্তাবে মেরামতের কাজ, মিনার লক্ষ্য আর আগের আবিষ্কার কারণ হিসেবে আছে।"></p>
+<p><em>মেরামতে কথা রাখা হয়; যে আবিষ্কার থেকে কাজটা এল, তার সঙ্গেও যোগ থাকে। এই যোগ ঘটনার সম্পর্ক ধরে, নির্দিষ্ট ঘড়ির সময় দেয় না।</em></p>
+<p><strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন। না-মেটা বিষয়ের সংখ্যা এখন শূন্য হবে। অ্যাপ আপনার ঠিক করা ফল রেকর্ড করেছে; গদ্যের মান বিচার করেনি বা ঘড়ি মিলিয়ে শেষ সময় যাচাই করেনি।</p>
+<h2 id="৫-এবার-গলপ-শেষ-হয়েছে-ঠিক-করুন"><a class="header" href="#৫-এবার-গলপ-শেষ-হয়েছে-ঠিক-করুন">৫. এবার গল্প শেষ হয়েছে ঠিক করুন</a></h2>
+<p><strong>শেষ করুন</strong> নিন। সমাপ্তির জন্য কয়েকটি পছন্দ আসবে। <strong>সব বিষয় মিটিয়ে এই সমাপ্তি অনুমোদন করুন</strong> বেছে নিন।</p>
+<p><img src="assets/05-conclusion.png" alt="আসল বাংলা সমাপ্তির অবস্থায় আপনার অনুমোদিত সমাপ্তি, সমাপ্তি মিটেছে আর কোনো বিষয় অমীমাংসিত নেই দেখা যায়।"></p>
+<p><em>দেখে নিন: <strong>আপনার অনুমোদিত সমাপ্তি</strong>, <strong>সমাপ্তি: মিটেছে।</strong>, আর <strong>এখনও মেটেনি · 0টি বিষয়</strong>। অনুমোদনের পর আবার অনুমোদন চাইবে না।</em></p>
+<p>হয়ে গেল: মিনার একটা ইচ্ছা ছিল, বাধা এল, তার জন্য কাজ করল, আর আপনার অনুমোদিত সমাপ্তিতে পৌঁছাল। গাঁথুনি এই কম্পিউটারে সংরক্ষিত থাকে। <strong>আপনার গল্পগুলো</strong> থেকে আবার খুলতে পারবেন।</p>
+<h2 id="কোথাও-ভুল-হলে"><a class="header" href="#কোথাও-ভুল-হলে">কোথাও ভুল হলে</a></h2>
+<p><strong>প্রস্তাব ভুল বলছে:</strong> নিশ্চিত করার আগে <strong>বাড়তি তথ্য দিন বা পছন্দ বদলান</strong> খুলে দরকারি <strong>বদলান:</strong> প্রশ্নটি নিন, উত্তর দিন, আবার <strong>চালিয়ে যান</strong>। সঠিক প্রস্তাব পড়েই নিশ্চিত করুন।</p>
+<p><strong>তাড়াতাড়ি সমাপ্তি অনুমোদন করেছেন:</strong> <strong>↶ শেষ সিদ্ধান্ত ফিরিয়ে নিন</strong> বেছে নিন। সবশেষ অনুমোদিত সমাপ্তি আবার খোলে, ইতিহাস থাকে। দেখে নিয়ে আবার অনুমোদন করতে পারেন। এটা সর্বশেষ সিদ্ধান্ত ফেরায়; যেকোনো পুরোনো অংশ সম্পাদনা করে না। এই দুই উদ্ধারপথ বর্তমান অ্যাপে ইংরেজি আর বাংলা—দুই ভাষাতেই চালিয়ে যাচাই করা হয়েছে।</p>
+<h2 id="একটু-অনযভাবে-দেখুন"><a class="header" href="#একটু-অনযভাবে-দেখুন">একটু অন্যভাবে দেখুন</a></h2>
+<p>চাইলে নতুন সংস্করণে মিনা <strong>বেরোনোর আগেই</strong> ছেঁড়া দেখুক। ঘটনাটা বদলালে একই মেরামত কি এখনও স্বাভাবিকভাবে আসে? এটা সৃজনশীল চেষ্টা করার আমন্ত্রণ, আরেকটা যাচাই করা ধাপে-ধাপে পাঠ নয়। কোন বদলে গল্পের অর্থ বদলায়, আপনি ঠিক করবেন।</p>
+<p>এবার একাধিক লক্ষ্য আর ইচ্ছে করে খোলা রাখা একটা প্রশ্ন নিয়ে কাজ করতে চাইলে <a href="#আরেকটু-বড়-গলপ">বড় গল্পের পদ্ধতি</a> আর <a href="#অসমভব-চিঠি">মায়ার রহস্যগল্পের পাঠ</a>-এ যেতে পারেন।</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="চরিতর-ইচছা-আর-ঘটনা"><a class="header" href="#চরিতর-ইচছা-আর-ঘটনা">“চরিত্র, ইচ্ছা আর ঘটনা”</a></h1>
+<p><strong>ভাষা:</strong> <a href="../topics/characters.html">English</a> · বাংলা</p>
+<p><strong>রূপরেখা — পুরো শেখার পাঠ নয়।</strong></p>
+<p><strong>পরিকল্পনায় (Envisioned) থাকা অধ্যায়।</strong></p>
+<p>কারও ইচ্ছা কীভাবে ঘটনাকে অর্থ দেয়, আর বাধা এলে সে কী করতে পারে—এসব দেখব। ছাতার পাঠে চরিত্র, লক্ষ্য আর ঘটনা এসেছে; বড় পাঠ এখনও লেখা আর পরীক্ষা করা বাকি।</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="সংযোগ-আর-পরিণতি"><a class="header" href="#সংযোগ-আর-পরিণতি">“সংযোগ আর পরিণতি”</a></h1>
+<p><strong>ভাষা:</strong> <a href="../topics/connections.html">English</a> · বাংলা</p>
+<p><strong>রূপরেখা — পুরো শেখার পাঠ নয়।</strong></p>
+<p><strong>পরিকল্পনায় (Envisioned) থাকা অধ্যায়।</strong></p>
+<p>একটার পরে আরেকটা ঘটনা ঘটা আর একটার কারণে আরেকটা ঘটা আলাদা। ছাতার পাঠে একটা কারণের যোগ আছে। পরে কোন পরিণতি ধরে রাখতে চান, সেটা দেখব।</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="পরশন-আর-সৃজনশীল-পছনদ"><a class="header" href="#পরশন-আর-সৃজনশীল-পছনদ">“প্রশ্ন আর সৃজনশীল পছন্দ”</a></h1>
+<p><strong>ভাষা:</strong> <a href="../topics/questions.html">English</a> · বাংলা</p>
+<p><strong>রূপরেখা — পুরো শেখার পাঠ নয়।</strong></p>
+<p><strong>পরিকল্পনায় (Envisioned) থাকা অধ্যায়।</strong></p>
+<p>চাই এমন প্রশ্ন, যেগুলো গুরুত্বপূর্ণ, কিন্তু প্রতিটা সৃজনশীল পছন্দে থামিয়ে দেয় না। লেখক যেন প্রশ্নের উত্তর দিতে পারেন, চাইলে পরে ভাবতে পারেন, কিংবা প্রশ্নটাকেই অন্যভাবে দেখতে পারেন। গল্পের সত্যি কী হবে, সেই সিদ্ধান্ত লেখকেরই থাকবে। পুরো পাঠ এখনও তৈরি হয়নি।</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="আরেকটু-বড়-গলপ"><a class="header" href="#আরেকটু-বড়-গলপ">“আরেকটু বড় গল্প”</a></h1>
+<p><strong>ভাষা:</strong> <a href="../topics/richer-story.html">English</a> · বাংলা</p>
+<p><strong>এখন আছে (Available) — ৮ নভেম্বর ২০২৬ তারিখে মায়ার রহস্যগল্প দিয়ে কাজের পদ্ধতি যাচাই করা হয়েছে।</strong></p>
+<p>গল্প একটু বড় হলে একসঙ্গে কয়েকজনের ইচ্ছা মনে রাখতে হয়। পরের পাঠ <em>তিন বছর পরে আসা চিঠি</em>-তে মায়ার সামনে বাস্তব একটা বিপদ, নীলার বাধা দেওয়ার নিজের কারণ, আর ইচ্ছে করে না-মেটানো একটা প্রশ্ন থাকবে। অ্যাপকে কাহিনি বানাতে বলব না; এই বিষয়গুলো আমরা গড়ে তুলব।</p>
+<h2 id="তিন-রকম-ভাবনা-আলাদা-রাখুন"><a class="header" href="#তিন-রকম-ভাবনা-আলাদা-রাখুন">তিন রকম ভাবনা আলাদা রাখুন</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>কী বোঝাতে চান</th><th>এই পাঠে কোথায় রাখবেন</th></tr>
+</thead>
+<tbody>
+<tr><td>গল্পের জগতে সত্যিই যা ঘটেছে বা সত্যি</td><td><strong>গল্পের বাস্তব তথ্য</strong> পরিসরে নির্দিষ্ট তথ্য, বা লেখকের ঠিক করা ঘটনা</td></tr>
+<tr><td>কোনো চরিত্রের সন্দেহ</td><td><strong>চরিত্রের বিশ্বাস</strong> পরিসরে বক্তব্য, সঙ্গে কার বিশ্বাস; সেটি ভুলও হতে পারে</td></tr>
+<tr><td>এখনও বেছে নেননি এমন বিকল্প</td><td><strong>লেখকের নোট</strong>, বা নিশ্চিত করার আগে বদলানো/বাতিল করা খসড়া</td></tr>
+<tr><td>সমাপ্তিতে যে প্রশ্ন খোলা রাখবেন</td><td>স্পষ্ট করে রাখা না-মেটা লক্ষ্য; শুধু নোট লিখলে সেটি না-মেটা বিষয়ের তালিকায় আসে না</td></tr>
+</tbody>
+</table>
+</div>
+<p>যে ক্রমে গাঁথুনি তৈরি করছি, সেটা আমাদের কাজের ক্রম। দৃশ্যের তালিকা, পাঠক কখন কী জানবেন, বা নিজে থেকে বানানো গদ্যের রূপরেখা নয়। <strong>পাঠক যা জানে</strong> পরিসরেও আলাদা বক্তব্য রাখা হয়; সেটা প্রকাশের সময় সাজানোর পূর্ণ ব্যবস্থা নয়।</p>
+<h2 id="বারবার-কাজে-লাগবে-যে-পদধতি"><a class="header" href="#বারবার-কাজে-লাগবে-যে-পদধতি">বারবার কাজে লাগবে যে পদ্ধতি</a></h2>
+<ol>
+<li><strong>বিস্তার করুন</strong>, <strong>জানতে দিন</strong>, <strong>জটিল করুন</strong>, <strong>যোগ করুন</strong>, <strong>মোড় ঘোরান</strong> বা <strong>মীমাংসা করুন</strong>-এর মতো একটি দিক নিন। তাতে কাজের পছন্দ আসে; আপনার লেখায় কতটা নাটক হলো, অ্যাপ তা বিচার করে না।</li>
+<li>বলা কাজটির বোতাম নিন। সামনে থাকা প্রশ্নের উত্তর দিয়ে <strong>চালিয়ে যান</strong> নিন। <strong>প্রস্তাবিত অর্থ</strong> না আসা পর্যন্ত দরকারি প্রশ্নের উত্তর দিন; বোতামটি চাপলেই সরাসরি প্রস্তাব আসবে, এমন নয়।</li>
+<li>তালিকার কোনো ঘর সরাসরি জানতে না চাইলে <strong>বাড়তি তথ্য দিন বা পছন্দ বদলান</strong> খুলুন। সেই প্রশ্নের আগে <strong>চাইলে বলুন:</strong> থাকলে তা নিন; আগে থেকে উত্তর থাকলে <strong>বদলান:</strong> নিন। লিখে বা বেছে <strong>চালিয়ে যান</strong> চাপুন। বাকি ঘরেও একইভাবে দিন। ঠিকভাবে আগেই বেছে দেওয়া থাকলে আবার উত্তর দিতে হবে না।</li>
+<li>আগে থাকা একজনকে বা একটি বিষয়কে তার নাম দিয়ে নিন। একাধিক মানুষ বা সম্পর্কিত বিষয় চাইলে তালিকার সব নির্দিষ্ট বিষয় বাছুন; আলাদা নাম নিতে macOS-এ Cmd, Windows/Linux-এ Ctrl ধরে নিতে পারেন। বক্তব্যের মান হিসেবে কোনো মানুষকে দিতে চাইলে <strong>তার বদলে আগে থাকা বিষয় বেছে নিন</strong> নিয়ে তাকে বাছুন। আগে থেকেই সেই তালিকা থাকলে সরাসরি বাছুন। সাধারণ লেখা চাইলে <strong>তার বদলে সরাসরি মান লিখুন</strong> নিন।</li>
+<li>কর্তা, কারণ আর লক্ষ্যসহ পুরো প্রস্তাব পড়ুন। আগে বেছে দেওয়া মানও যাচাইয়ের প্রস্তাব; কথায় অন্য কারও নাম থাকলে ভুল কর্তাও আসতে পারে। <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নেওয়ার আগে তা বদলান। কারও নাম লেখায় থাকলেই ঠিক সম্পর্কটি চিত্রে তৈরি হবে না।</li>
+<li>আপনার সিদ্ধান্তের সঙ্গে অর্থ মিললেই নিশ্চিত করুন। তখন চিত্র বদলায়। ভাবনা বাদ দিতে <strong>এই খসড়া বাতিল করুন</strong> নিন। প্রস্তাব বদলাতে নিশ্চিত করার আগেই উত্তর বদলান; পরে সাধারণ সম্পাদকের মতো সব বদলাতে পারবেন ধরে নেবেন না।</li>
+</ol>
+<p>পরের পাঠে দরকারি প্রতিটি মান দেওয়া আছে। আগের ধাপের উল্লেখ মানে সেই বিষয়টি বেছে নেওয়া; একই নামে নতুন করে বানানো নয়। তথ্য, বক্তব্য আর বিশ্বাসের নাম কাছাকাছি হলে তালিকায় তাদের ধরন দেখুন। বিশ্বাসের তথ্য দেখতে <strong>সত্যতা</strong> আর <strong>চলছে</strong>-এর মান পড়ুন; <code>false</code> থাকা আর বিশ্বাসের রেকর্ড না থাকা এক কথা নয়।</p>
+<h2 id="একটা-ভাবনা-পরকাশে-কত-কাজ-হচছে-দেখুন"><a class="header" href="#একটা-ভাবনা-পরকাশে-কত-কাজ-হচছে-দেখুন">একটা ভাবনা প্রকাশে কত কাজ হচ্ছে দেখুন</a></h2>
+<p>যাচাই করা পাঠে ১৯টি অর্থপূর্ণ অগ্রগতি আর আলাদা সমাপ্তির অনুমোদন আছে। ওই ১৯টির জন্য অ্যাপ ইংরেজিতে <strong>১৫৮টি</strong>, বাংলায় <strong>১৫৬টি লেখকের সাড়া</strong> গুনেছে; দুটোতেই প্রতি অগ্রগতিতে মধ্যম সংখ্যা <strong>৭</strong>। এর মধ্যে দিক ও কাজের পছন্দ, উত্তর, বাড়তি ঘর বাছা, সংশোধন আর নিশ্চিত করা আছে। এটা শুধু প্রশ্নের সংখ্যা বা লেখার সময়ের হিসাব নয়।</p>
+<p>আগে প্রস্তাব বদলে দেখার অংশটিতে ইচ্ছে করেই একটু বাড়তি কাজ আছে। “পরিচয়ের সংকেত মুছে কপি দেওয়া” সিদ্ধান্তে বাদ দেওয়া খসড়াসহ ১৩টি সাড়া আর নথিভুক্ত ২০টি নিয়ন্ত্রণের কাজ লেগেছে। শেষ মীমাংসায় ইংরেজিতে ১১টি, বাংলায় ৯টি সাড়া: ইংরেজি বাক্য থেকে প্রথমে ভুল কর্তা এসেছিল, নিশ্চিত করার আগেই তা ঠিক করা হয়েছে। অর্থ ঠিক থাকল, কিন্তু বাড়তি কাজের মূল্য দেখা গেল।</p>
+<p>নথিভুক্ত কাজের হিসাবে একবার লেখা দেওয়া বা একসঙ্গে কয়েকটি নাম বাছা এক কাজ; প্রতিটি অক্ষর বা মাউসের চাপ গোনা হয়নি। সিদ্ধান্ত ফিরিয়ে আবার করা, বাতিল করা কারণের চক্র, গল্পের তথ্য দেওয়া আর চিত্র দেখা মূল হিসাবের বাইরে আলাদা রাখা হয়েছে। একই লেখকের ঠিক করা গল্পের দুটো স্বয়ংক্রিয় মহড়া এটি; নতুন লেখকদের নিয়ে ব্যবহার-গবেষণা নয়।</p>
+<h2 id="গাঁথুনি-বড়-হলে-কী-হয়-দেখুন"><a class="header" href="#গাঁথুনি-বড়-হলে-কী-হয়-দেখুন">গাঁথুনি বড় হলে কী হয় দেখুন</a></h2>
+<p>প্রথম ছয় অগ্রগতির পরে চিত্রে ৭টি বিষয়; দ্বন্দ্বের পরে ১৭টি; অনুমোদিত সমাপ্তিতে <strong>২৪টি বিষয় আর ৪৯টি সংযোগ</strong>। কিছু বিষয় তথ্য আর বিশ্বাস বদলের রেকর্ড; প্রতিটি আলাদা কাহিনির ঘটনা নয়। বিষয় গুনেই গল্প সমৃদ্ধ হলো ধরে নেবেন না।</p>
+<p><img src="assets/m8/01-premise.png" alt="আসল বাংলা কাজের জায়গায় মায়ার মূল লক্ষ্য রাখার পরের প্রথম অবস্থা।"></p>
+<p>শেষে পুরো চিত্র একসঙ্গে ধরলে বড় নামগুলো আর আরামে পড়া যায় না। <strong>পুরোটা দেখুন</strong> অবস্থান বোঝাতে কাজে লাগে; বিস্তারিত পড়তে পাশের তথ্য আর সংযোগের বোতাম ভালো। <strong>সাজিয়ে নিন</strong>-এ বিষয়গুলোর জায়গা বদলাতে পারে; পর্দার অবস্থান গল্পের স্থায়ী ঠিকানা নয়। ছোট এই নমুনায় এটুকু অসুবিধা দেখা গেছে; স্তরভাগই একমাত্র সমাধান, তার প্রমাণ নয়। আগে থেকেই নির্দিষ্ট অংশ নিয়ে কাজের আলাদা সুবিধা আছে; এই পাঠে এক জায়গায় থেকে বর্তমান পুরো চিত্রটি দেখছি।</p>
+<p>এবার সরাসরি <a href="#অসমভব-চিঠি">অসম্ভব চিঠি</a>-তে গিয়ে গাঁথুনি তৈরি করুন। মাঝের সময়ের অধ্যায়টি এখনও ভাবনার রূপরেখা; এই পাঠের পূর্বশর্ত বা এখন ব্যবহার করার সময়রেখা নয়।</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="সময়-জানা-আর-পরকাশ"><a class="header" href="#সময়-জানা-আর-পরকাশ">“সময়, জানা আর প্রকাশ”</a></h1>
+<p><strong>ভাষা:</strong> <a href="../topics/time.html">English</a> · বাংলা</p>
+<p><strong>রূপরেখা — পুরো শেখার পাঠ নয়।</strong></p>
+<p><strong>পরিকল্পনায় (Envisioned) থাকা অধ্যায়।</strong></p>
+<p>গল্পে কখন কী ঘটে, পাঠক কখন জানতে পারে, আর চরিত্র কী বিশ্বাস করে—এগুলো ইচ্ছে করেই আলাদা হতে পারে। আমরা যে সময়রেখার কথা ভাবছি, সেটি একই গল্পের একটা দৃশ্য হবে, আলাদা করে মিলিয়ে রাখার আরেকটা গল্প নয়। যাচাই করা সংস্করণে সময়রেখার নিয়ন্ত্রণ নেই।</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="অসমভব-চিঠি"><a class="header" href="#অসমভব-চিঠি">“অসম্ভব চিঠি”</a></h1>
+<p><strong>ভাষা:</strong> <a href="../topics/impossible-letter.html">English</a> · বাংলা</p>
+<p><strong>এখন আছে (Available) — ৮ নভেম্বর ২০২৬ তারিখে এখনও প্রকাশ না-করা পরীক্ষামূলক অ্যাপে পুরো পাঠ যাচাই করা হয়েছে।</strong></p>
+<h2 id="তিন-বছর-পরে-আসা-চিঠি"><a class="header" href="#তিন-বছর-পরে-আসা-চিঠি">তিন বছর পরে আসা চিঠি</a></h2>
+<p>আরিফের মৃত্যুর তিন বছর পর তাঁর স্ত্রী মায়া সিল-করা একটা চিঠি পায়। হাতের লেখা আরিফের মতো। বন্যার ফটকের পরের চাপ-পরীক্ষায় নিচু পাড়া ডুবে যাবে—চিঠিতে এই সতর্কবার্তা। কুরিয়ার নীলা যতটা বলছে, তার চেয়ে বেশি জানে। তার ভাই গোপনে রক্ষণাবেক্ষণের নথি দিয়েছিল; মূল চিঠি প্রকাশ করলে তার পরিচয় বেরিয়ে যেতে পারে।</p>
+<p>এটা লেখকের কাজ শেখার পাঠ, তাই রহস্যের উত্তর আগেই বলছি। আমরা স্বাভাবিক একটা ব্যাখ্যা বেছে নেব; অ্যাপকে রহস্য সমাধান করতে বলব না। নতুন পরীক্ষার খবর পেয়ে নীলা আসল পুরোনো সতর্কবার্তাটি পাঠিয়েছে। তথ্যদাতার পরিচয় না খুলেও কাজে লাগে, এমন প্রমাণ মায়াকে খুঁজতে হবে। খামের অচেনা নীল তারাটা খোলা প্রশ্ন হয়ে থাকবে।</p>
+<p>আগে <a href="#আপনার-পরথম-ছোটট-গলপ">ছোট্ট গল্পের পাঠ</a> শেষ করুন, তারপর <a href="#আরেকটু-বড়-গলপ">বড় গল্পে কাজের পদ্ধতি</a> পড়ুন। এখানে তৈরি হবে সম্পর্ক ধরে রাখা গল্পের গাঁথুনি; গদ্য, দৃশ্যের ক্রম বা পাঠক কখন কী জানবেন, তার তালিকা নয়। নিচের সব কাজ বর্তমান বোতাম দিয়েই করা যায়; নতুন করে স্তর ভাগ বা দল সাজানোর সুবিধা লাগবে না।</p>
+<h2 id="পরথম-অগরগতির-আগে"><a class="header" href="#পরথম-অগরগতির-আগে">প্রথম অগ্রগতির আগে</a></h2>
+<p><strong>নতুন গল্প শুরু করুন</strong> থেকে নাম দিন <strong>তিন বছর পরে আসা চিঠি</strong>। অ্যাপ English থাকলে <strong>Interface language</strong> থেকে <strong>বাংলা</strong> নিন; বাংলায় এই পছন্দটির নাম <strong>অ্যাপের ভাষা</strong>। <strong>গল্পের তথ্য</strong> খুলে <strong>গল্পের ভাষা → বাংলা</strong> নিন। নতুন গল্পের ভাষা এখন শুরুতে English থাকে, অ্যাপ বাংলা হলেও। <strong>লেখকের নোট</strong>-এ লিখুন: “এটি গল্পের গাঁথুনি, গদ্য নয়। নীল তারার রহস্য ইচ্ছে করে খোলা থাকবে।” তথ্য সংরক্ষণ করুন।</p>
+<p>নম্বরের ক্রমে এগোন। প্রতিটি অগ্রগতিতে কোন দিক আর কোন বোতাম নিতে হবে, বলা আছে। <a href="#আরেকটু-বড়-গলপ">বড় গল্পে কাজের পদ্ধতি</a> মেনে নিচে দেওয়া সব ঘর পূরণ করুন; কোনো কোনোটি আগেই বেছে দেওয়া থাকতে পারে। “৫ নম্বর ধাপ” মানে সেই ধাপের তৈরি বিষয়টি তালিকা থেকে নেবেন; কথাটা লিখবেন না, আবার নতুন করেও তৈরি করবেন না। কাছাকাছি নাম থাকলে তালিকায় চরিত্র, বক্তব্য, তথ্য বা বিশ্বাসের ধরন দেখে নিন। পরে একই বক্তব্য ব্যবহার করার সময় তার বিষয়, সম্পর্কের কথা আর অন্য ব্যক্তিকে একই রাখুন।</p>
+<h2 id="১-অসমভব-আগমনটা-তৈরি-করুন"><a class="header" href="#১-অসমভব-আগমনটা-তৈরি-করুন">১. অসম্ভব আগমনটা তৈরি করুন</a></h2>
+<p>আরিফের মৃত্যু গল্পের সত্যি হিসেবে রাখছি। তাঁর মতো হাতের লেখা পাওয়া তদন্তের সূত্র; মৃত মানুষ গতকাল লিখেছেন, তার প্রমাণ নয়। মায়ার লক্ষ্য থাকায় সতর্কবার্তাটা তার নিজের শোকের বাইরেও মানুষের জীবনে জরুরি হয়ে ওঠে।</p>
+<h3 id="১-মায়াকে-আনুন"><a class="header" href="#১-মায়াকে-আনুন">১. মায়াকে আনুন</a></h3>
+<p><strong>বিস্তার করুন → মানুষ, জায়গা, বস্তু বা সম্পদ যোগ করুন</strong> নিন।</p>
+<ul>
+<li><strong>কাকে বা কী যোগ করছেন?</strong> — চরিত্র</li>
+<li><strong>কী দিয়ে তাকে চেনা যাবে? একটা নাম দিন।</strong> — মায়া</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h3 id="২-আরিফকে-মনে-রাখুন"><a class="header" href="#২-আরিফকে-মনে-রাখুন">২. আরিফকে মনে রাখুন</a></h3>
+<p><strong>বিস্তার করুন → মানুষ, জায়গা, বস্তু বা সম্পদ যোগ করুন</strong> নিন।</p>
+<ul>
+<li><strong>কাকে বা কী যোগ করছেন?</strong> — চরিত্র</li>
+<li><strong>কী দিয়ে তাকে চেনা যাবে? একটা নাম দিন।</strong> — আরিফ</li>
+<li><strong>কোন প্রসঙ্গটা মনে রাখা দরকার?</strong> — মায়ার স্বামী; চিঠি আসার তিন বছর আগে তিনি মারা গেছেন।</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h3 id="৩-সতরকবারতাটা-নিরদিষট-রাখুন"><a class="header" href="#৩-সতরকবারতাটা-নিরদিষট-রাখুন">৩. সতর্কবার্তাটা নির্দিষ্ট রাখুন</a></h3>
+<p><strong>বিস্তার করুন → মানুষ, জায়গা, বস্তু বা সম্পদ যোগ করুন</strong> নিন।</p>
+<ul>
+<li><strong>কাকে বা কী যোগ করছেন?</strong> — বস্তু</li>
+<li><strong>কী দিয়ে তাকে চেনা যাবে? একটা নাম দিন।</strong> — সিল-করা চিঠি</li>
+<li><strong>কোন প্রসঙ্গটা মনে রাখা দরকার?</strong> — আরিফের মতো হাতের লেখায় সতর্কবার্তা: বন্যার ফটকের পরের চাপ-পরীক্ষায় নিচু পাড়া ডুবে যাবে।</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h3 id="৪-মৃতযুটা-সতযি-হিসেবে-রাখুন"><a class="header" href="#৪-মৃতযুটা-সতযি-হিসেবে-রাখুন">৪. মৃত্যুটা সত্যি হিসেবে রাখুন</a></h3>
+<p><strong>জানতে দিন → নির্দিষ্ট তথ্য বা বিশ্বাস যোগ করুন</strong> নিন।</p>
+<ul>
+<li><strong>বক্তব্যটা কাকে বা কী নিয়ে?</strong> — আরিফ (২ নম্বর ধাপ)</li>
+<li><strong>তার সম্পর্কে কী বলা হচ্ছে?</strong> — মারা গেছেন</li>
+<li><strong>মান বা সম্পর্কিত বিষয় কী?</strong> — চিঠি আসার তিন বছর আগে</li>
+<li><strong>কে এটাকে জানা কথা হিসেবে ধরতে পারে?</strong> — গল্পের বাস্তব তথ্য</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h3 id="৫-চিঠি-এসে-পৌঁছাক"><a class="header" href="#৫-চিঠি-এসে-পৌঁছাক">৫. চিঠি এসে পৌঁছাক</a></h3>
+<p><strong>বিস্তার করুন → আরেকটা নির্দিষ্ট ঘটনা</strong> নিন।</p>
+<ul>
+<li><strong>কী ঘটেছিল?</strong> — আরিফের মৃত্যুর তিন বছর পর মায়া সিল-করা চিঠিটি পায়।</li>
+<li><strong>কে বা কী এটা শুরু করেছিল?</strong> — মায়া (১ নম্বর ধাপ)</li>
+<li><strong>কার ওপর বা কিসের ওপর প্রভাব পড়ে?</strong> — সিল-করা চিঠি (৩ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h3 id="৬-শোকের-বাইরেও-মায়ার-একটা-লকষয-থাকুক"><a class="header" href="#৬-শোকের-বাইরেও-মায়ার-একটা-লকষয-থাকুক">৬. শোকের বাইরেও মায়ার একটা লক্ষ্য থাকুক</a></h3>
+<p><strong>আরও গভীরে যান → লক্ষ্য বা প্রেরণা দিন</strong> নিন।</p>
+<ul>
+<li><strong>এটা কার লক্ষ্য?</strong> — মায়া (১ নম্বর ধাপ)</li>
+<li><strong>সে কী করতে চায়?</strong> — নিচু পাড়ার মানুষকে সতর্ক করা আর বিপজ্জনক চাপ-পরীক্ষা থামানো।</li>
+<li><strong>লক্ষ্যটা কাকে বা কী নিয়ে?</strong> — সিল-করা চিঠি (৩ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<p><strong>দেখে নিন:</strong> চিত্রে সাতটি বিষয় আর একটি না-মেটা লক্ষ্য।</p>
+<h2 id="২-সনদেহের-একটা-মূলয-থাকুক"><a class="header" href="#২-সনদেহের-একটা-মূলয-থাকুক">২. সন্দেহের একটা মূল্য থাকুক</a></h2>
+<p>কুরিয়ার সিল নীলার দিকে ইঙ্গিত করে, কিন্তু চিঠি জাল হওয়ার প্রমাণ নয়। মায়াকে এখানে ইচ্ছে করেই ভুল ধারণা দিচ্ছি। ভাইকে আড়াল করতে চাওয়া নীলার আলাদা ইচ্ছা; তাতে সে খলনায়ক হয়ে যায় না। নীল তারার প্রশ্নটা লক্ষ্য হিসেবে রাখব, যাতে সমাপ্তিতে সেটাকে খোলা রাখার সিদ্ধান্ত দেখা যায়।</p>
+<h3 id="৭-ভুল-পথে-নিতে-পারে-এমন-সিল-পাওয়া-যাক"><a class="header" href="#৭-ভুল-পথে-নিতে-পারে-এমন-সিল-পাওয়া-যাক">৭. ভুল পথে নিতে পারে এমন সিল পাওয়া যাক</a></h3>
+<p><strong>জানতে দিন → আরেকটা নির্দিষ্ট ঘটনা</strong> নিন।</p>
+<ul>
+<li><strong>কী ঘটেছিল?</strong> — খামে অচেনা নীল তারার পাশে নীলার নতুন কুরিয়ার সিল দেখতে পায় মায়া।</li>
+<li><strong>কে বা কী এটা শুরু করেছিল?</strong> — মায়া (১ নম্বর ধাপ)</li>
+<li><strong>কার ওপর বা কিসের ওপর প্রভাব পড়ে?</strong> — সিল-করা চিঠি (৩ নম্বর ধাপ)</li>
+<li><strong>আগের কোন ঘটনার কারণে এটা ঘটে?</strong> — আরিফের মৃত্যুর তিন বছর পর মায়া সিল-করা চিঠিটি পায়। (৫ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h3 id="৮-যে-পরশন-খোলা-রাখব-তাকে-নাম-দিন"><a class="header" href="#৮-যে-পরশন-খোলা-রাখব-তাকে-নাম-দিন">৮. যে প্রশ্ন খোলা রাখব, তাকে নাম দিন</a></h3>
+<p><strong>আরও গভীরে যান → লক্ষ্য বা প্রেরণা দিন</strong> নিন।</p>
+<ul>
+<li><strong>এটা কার লক্ষ্য?</strong> — মায়া (১ নম্বর ধাপ)</li>
+<li><strong>সে কী করতে চায়?</strong> — খামে নীল তারাটা কে এঁকেছে, তা জানা।</li>
+<li><strong>লক্ষ্যটা কাকে বা কী নিয়ে?</strong> — সিল-করা চিঠি (৩ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h3 id="৯-নীলাকে-আনুন"><a class="header" href="#৯-নীলাকে-আনুন">৯. নীলাকে আনুন</a></h3>
+<p><strong>বিস্তার করুন → মানুষ, জায়গা, বস্তু বা সম্পদ যোগ করুন</strong> নিন।</p>
+<ul>
+<li><strong>কাকে বা কী যোগ করছেন?</strong> — চরিত্র</li>
+<li><strong>কী দিয়ে তাকে চেনা যাবে? একটা নাম দিন।</strong> — নীলা</li>
+<li><strong>কোন প্রসঙ্গটা মনে রাখা দরকার?</strong> — একসময় আরিফের সঙ্গে কাজ করত এই কুরিয়ার; তার ভাই গোপনে রক্ষণাবেক্ষণের নথি দিয়েছিল।</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h3 id="১০-মায়া-আর-আরিফের-সমপরক-রাখুন"><a class="header" href="#১০-মায়া-আর-আরিফের-সমপরক-রাখুন">১০. মায়া আর আরিফের সম্পর্ক রাখুন</a></h3>
+<p><strong>যোগ করুন → সম্পর্ক তৈরি করুন</strong> নিন।</p>
+<ul>
+<li><strong>সম্পর্কটা কার দিক থেকে?</strong> — মায়া (১ নম্বর ধাপ)</li>
+<li><strong>তাদের সম্পর্ক কেমন?</strong> — বিয়ে হয়েছিল</li>
+<li><strong>সম্পর্কটা কার সঙ্গে?</strong> — আরিফ (২ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h3 id="১১-নীলার-নিজের-লকষযও-থাকুক"><a class="header" href="#১১-নীলার-নিজের-লকষযও-থাকুক">১১. নীলার নিজের লক্ষ্যও থাকুক</a></h3>
+<p><strong>আরও গভীরে যান → লক্ষ্য বা প্রেরণা দিন</strong> নিন।</p>
+<ul>
+<li><strong>এটা কার লক্ষ্য?</strong> — নীলা (৯ নম্বর ধাপ)</li>
+<li><strong>সে কী করতে চায়?</strong> — প্রকাশ করা প্রমাণে ভাইয়ের পরিচয় গোপন রাখা।</li>
+<li><strong>লক্ষ্যটা কাকে বা কী নিয়ে?</strong> — সিল-করা চিঠি (৩ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h3 id="১২-মায়া-চিঠি-জাল-হওয়ার-সনদেহ-করুক"><a class="header" href="#১২-মায়া-চিঠি-জাল-হওয়ার-সনদেহ-করুক">১২. মায়া চিঠি জাল হওয়ার সন্দেহ করুক</a></h3>
+<p><strong>জানতে দিন → নির্দিষ্ট তথ্য বা বিশ্বাস যোগ করুন</strong> নিন।</p>
+<ul>
+<li><strong>বক্তব্যটা কাকে বা কী নিয়ে?</strong> — সিল-করা চিঠি (৩ নম্বর ধাপ)</li>
+<li><strong>তার সম্পর্কে কী বলা হচ্ছে?</strong> — জাল করেছে</li>
+<li><strong>মান বা সম্পর্কিত বিষয় কী?</strong> — আগে থাকা বিষয়টি নিন: নীলা (৯ নম্বর ধাপ)</li>
+<li><strong>কে এটাকে জানা কথা হিসেবে ধরতে পারে?</strong> — চরিত্রের বিশ্বাস</li>
+<li><strong>কে এটা বিশ্বাস করে?</strong> — মায়া (১ নম্বর ধাপ)</li>
+<li><strong>কোন ঘটনায় এটা প্রতিষ্ঠিত হয় বা জানা যায়?</strong> — খামে অচেনা নীল তারার পাশে নীলার নতুন কুরিয়ার সিল দেখতে পায় মায়া। (৭ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<p>এতে একটি বক্তব্য, মায়ার সক্রিয় বিশ্বাস আর সিল দেখার ঘটনায় সেই ধারণা পাওয়ার রেকর্ড তৈরি হয়। চিঠি সত্যিই জাল—এমন সত্যি তৈরি হয় না।</p>
+<h2 id="৩-দবনদবটা-সপষট-করুন"><a class="header" href="#৩-দবনদবটা-সপষট-করুন">৩. দ্বন্দ্বটা স্পষ্ট করুন</a></h2>
+<p>পরীক্ষা এগিয়ে আসায় তাড়া বাড়ে। কিন্তু শুধু তাড়া থাকলেই অ্যাপে দ্বন্দ্বের সম্পর্ক তৈরি হয় না। চিঠি প্রকাশ নিয়ে মতভেদের সঙ্গে দুজন মানুষ আর তাঁদের লক্ষ্য যুক্ত করুন। সতর্কবার্তা আর গোপনীয়তা—দুটোই জরুরি হতে পারে। আপনার গল্পে এই টানাপোড়েন বিশ্বাসযোগ্য লাগছে কি না ভাবুন।</p>
+<h3 id="১৩-পরীকষার-সময়-এগিয়ে-আসুক"><a class="header" href="#১৩-পরীকষার-সময়-এগিয়ে-আসুক">১৩. পরীক্ষার সময় এগিয়ে আসুক</a></h3>
+<p><strong>জটিল করুন → চরিত্র কাজ করে বা সিদ্ধান্ত নেয়</strong> নিন।</p>
+<ul>
+<li><strong>কে কাজটা করে?</strong> — নীলা (৯ নম্বর ধাপ)</li>
+<li><strong>সে কী করে?</strong> — নীলা মায়াকে জানায়, কর্তৃপক্ষ চাপ-পরীক্ষা এগিয়ে এনে আজ রাতেই করবে।</li>
+<li><strong>কোন ঘটনা এর আগে হওয়া দরকার?</strong> — আরিফের মৃত্যুর তিন বছর পর মায়া সিল-করা চিঠিটি পায়। (৫ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h3 id="১৪-মানুষ-আর-লকষয-দিয়ে-দবনদবটা-বাঁধুন"><a class="header" href="#১৪-মানুষ-আর-লকষয-দিয়ে-দবনদবটা-বাঁধুন">১৪. মানুষ আর লক্ষ্য দিয়ে দ্বন্দ্বটা বাঁধুন</a></h3>
+<p><strong>জটিল করুন → সুনির্দিষ্ট বিরোধী দায় তৈরি করুন</strong> নিন।</p>
+<ul>
+<li><strong>দায়গুলো কেন একসঙ্গে রাখা যাচ্ছে না?</strong> — বিশ্বাসযোগ্য সতর্কবার্তা দিতে মায়ার প্রমাণ প্রকাশ করা দরকার, কিন্তু মূল চিঠিতে নীলার ভাইয়ের পরিচয় বেরিয়ে যাবে; নীলা তা প্রকাশে রাজি নয়।</li>
+<li><strong>কারা জড়িত?</strong> — মায়া (১ নম্বর ধাপ); নীলা (৯ নম্বর ধাপ)</li>
+<li><strong>কী নিয়ে বিরোধ?</strong> — সিল-করা চিঠি (৩ নম্বর ধাপ)</li>
+<li><strong>কোন লক্ষ্যগুলো পরস্পরের বিরোধী?</strong> — নিচু পাড়ার মানুষকে সতর্ক করা আর বিপজ্জনক চাপ-পরীক্ষা থামানো। (৬ নম্বর ধাপ); প্রকাশ করা প্রমাণে ভাইয়ের পরিচয় গোপন রাখা। (১১ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<p><strong>দেখে নিন:</strong> দ্বন্দ্বে দুজন মানুষ আর দুটো লক্ষ্য যুক্ত আছে; নীল তারার লক্ষ্যটি আলাদা। পরীক্ষার সময় এগিয়ে আসা লেখকের দেওয়া তথ্য, অ্যাপের ক্যালেন্ডার হিসাব নয়।</p>
+<p><img src="assets/m8/03-conflict.png" alt="আসল অ্যাপে দ্বন্দ্বের সঙ্গে পরস্পরের টানাপোড়েনে থাকা লক্ষ্যগুলো যুক্ত করার পরের অবস্থা।"></p>
+<h2 id="৪-কোন-পরমাণ-মানবেন-আর-দেবেন-তা-ঠিক-করুন"><a class="header" href="#৪-কোন-পরমাণ-মানবেন-আর-দেবেন-তা-ঠিক-করুন">৪. কোন প্রমাণ মানবেন আর দেবেন, তা ঠিক করুন</a></h2>
+<p>কার্বন কপিতে স্বাভাবিক একটা ব্যাখ্যা পাওয়া যায়: আরিফ পরের পরীক্ষার বিপদ বুঝেছিলেন, মৃত্যুর পর ভবিষ্যৎ দেখে তারিখ বলেননি। পরীক্ষার খবর পেয়ে নীলা তাঁর আসল পুরোনো চিঠি পাঠিয়েছে। চিঠি জাল নয়—এই সত্যি আর মায়ার ধারণা বদলানো আলাদাভাবে রাখুন। অ্যাপ নিজে থেকে তার মন বদলে দেবে না।</p>
+<h3 id="১৫-তারিখ-দেওয়া-কারবন-কপি-পাওয়া-যাক"><a class="header" href="#১৫-তারিখ-দেওয়া-কারবন-কপি-পাওয়া-যাক">১৫. তারিখ-দেওয়া কার্বন কপি পাওয়া যাক</a></h3>
+<p><strong>বিস্তার করুন → চরিত্র কাজ করে বা সিদ্ধান্ত নেয়</strong> নিন।</p>
+<ul>
+<li><strong>কে কাজটা করে?</strong> — মায়া (১ নম্বর ধাপ)</li>
+<li><strong>সে কী করে?</strong> — মায়া আরিফের তারিখ-দেওয়া কার্বন কপি পায়: মেরামত না হওয়ায় পরের চাপ-পরীক্ষায় বিপদের কথা তিনি আগেই বুঝেছিলেন; পরীক্ষার খবর পেয়ে নীলা তাঁর পুরোনো চিঠিটি পাঠিয়েছে।</li>
+<li><strong>আগের কোন ঘটনার কারণে এটা ঘটে?</strong> — নীলা মায়াকে জানায়, কর্তৃপক্ষ চাপ-পরীক্ষা এগিয়ে এনে আজ রাতেই করবে। (১৩ নম্বর ধাপ)</li>
+<li><strong>কার ওপর বা কিসের ওপর প্রভাব পড়ে?</strong> — সিল-করা চিঠি (৩ নম্বর ধাপ)</li>
+<li><strong>এতে কোন লক্ষ্য এগোয় বা বাধা পায়?</strong> — নিচু পাড়ার মানুষকে সতর্ক করা আর বিপজ্জনক চাপ-পরীক্ষা থামানো। (৬ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h3 id="১৬-চিঠি-জাল-নয়-সেই-পরমাণ-রাখুন"><a class="header" href="#১৬-চিঠি-জাল-নয়-সেই-পরমাণ-রাখুন">১৬. চিঠি জাল নয়, সেই প্রমাণ রাখুন</a></h3>
+<p><strong>জানতে দিন → নির্দিষ্ট তথ্য বা বিশ্বাস যোগ করুন</strong> নিন।</p>
+<ul>
+<li><strong>বক্তব্যটা কাকে বা কী নিয়ে?</strong> — সিল-করা চিঠি (৩ নম্বর ধাপ)</li>
+<li><strong>তার সম্পর্কে কী বলা হচ্ছে?</strong> — জাল করেছে</li>
+<li><strong>মান বা সম্পর্কিত বিষয় কী?</strong> — আগে থাকা বিষয়টি নিন: নীলা (৯ নম্বর ধাপ)</li>
+<li><strong>কে এটাকে জানা কথা হিসেবে ধরতে পারে?</strong> — গল্পের বাস্তব তথ্য</li>
+<li><strong>বক্তব্যটা সত্যি বলে ধরা হচ্ছে, নাকি অস্বীকার করা হচ্ছে?</strong> — অস্বীকার করা</li>
+<li><strong>কোন ঘটনায় এটা প্রতিষ্ঠিত হয় বা জানা যায়?</strong> — মায়া আরিফের তারিখ-দেওয়া কার্বন কপি পায়: মেরামত না হওয়ায় পরের চাপ-পরীক্ষায় বিপদের কথা তিনি আগেই বুঝেছিলেন; পরীক্ষার খবর পেয়ে নীলা তাঁর পুরোনো চিঠিটি পাঠিয়েছে। (১৫ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<p>১২ নম্বর ধাপের একই চিঠি, একই সম্পর্কের কথা আর একই নীলাকে নিন। <strong>অস্বীকার করা</strong> মানে এখানে চিঠি জাল হওয়ার কথা অস্বীকার করা; আরিফের মৃত্যু নয়। পরের ধাপ না করা পর্যন্ত মায়ার আগের বিশ্বাস সক্রিয়ই থাকবে।</p>
+<h3 id="১৭-মায়ার-ধারণা-বদলাক"><a class="header" href="#১৭-মায়ার-ধারণা-বদলাক">১৭. মায়ার ধারণা বদলাক</a></h3>
+<p><strong>জানতে দিন → বিশ্বাস তৈরি করুন, সরান বা সংশোধন করুন</strong> নিন।</p>
+<ul>
+<li><strong>বিশ্বাসটা কীভাবে বদলায়?</strong> — বিশ্বাস সংশোধন করা</li>
+<li><strong>কার বিশ্বাস বদলায়?</strong> — মায়া (১ নম্বর ধাপ)</li>
+<li><strong>গল্পের কোন ঘটনায় তা বদলায়?</strong> — মায়া আরিফের তারিখ-দেওয়া কার্বন কপি পায়: মেরামত না হওয়ায় পরের চাপ-পরীক্ষায় বিপদের কথা তিনি আগেই বুঝেছিলেন; পরীক্ষার খবর পেয়ে নীলা তাঁর পুরোনো চিঠিটি পাঠিয়েছে। (১৫ নম্বর ধাপ)</li>
+<li><strong>কোন বক্তব্যটা নতুন বিশ্বাস হয় বা পুরোনোটার জায়গায় আসে?</strong> — বক্তব্য (১২ নম্বর ধাপ)</li>
+<li><strong>আগের কোন বিশ্বাসটা সরবে বা সংশোধন হবে?</strong> — বিশ্বাস (১২ নম্বর ধাপ)</li>
+<li><strong>নতুন বিশ্বাসটা সত্যি বলে ধরা হচ্ছে, নাকি অস্বীকার করা হচ্ছে?</strong> — অস্বীকার করা</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<p>আগের বিশ্বাস নিষ্ক্রিয় হবে, কিন্তু রেকর্ড থাকবে। নতুন বিশ্বাস একই জাল করার বক্তব্য অস্বীকার করে। শুধু নাম দেখে দুটো কাছাকাছি লাগতে পারে; <strong>সত্যতা</strong> আর <strong>চলছে</strong>-এর মানও দেখুন।</p>
+<h3 id="১৮-মূলয-দিয়েও-পরমাণ-ভাগ-করুন"><a class="header" href="#১৮-মূলয-দিয়েও-পরমাণ-ভাগ-করুন">১৮. মূল্য দিয়েও প্রমাণ ভাগ করুন</a></h3>
+<p><strong>মোড় ঘোরান → চরিত্র কাজ করে বা সিদ্ধান্ত নেয়</strong> নিন।</p>
+<p>নিশ্চিত করার আগেই বদলানোর চেষ্টা করুন। <strong>সে কী করে?</strong> ঘরে আগে নিচের খসড়াটি দিন, প্রস্তাব পর্যন্ত যান, তারপর নিশ্চিত করার আগে সেই ঘরের উত্তর বদলান:</p>
+<blockquote>
+<p>মায়া কিছু না মুছেই চিঠি প্রকাশ করে নীলার ভাইয়ের পরিচয় ফাঁস করে দেয়।</p>
+</blockquote>
+<p>এবার নিচের কাজটি দিয়ে বদলান। প্রথম লেখাটি বাদ দেওয়া বিকল্প; এই গল্পে ঘটে যাওয়া ঘটনা নয়।</p>
+<ul>
+<li><strong>কে কাজটা করে?</strong> — মায়া (১ নম্বর ধাপ)</li>
+<li><strong>সে কী করে?</strong> — তথ্যদাতার সংকেত মুছে মায়া ইঞ্জিনিয়ারদের তারিখ-দেওয়া কার্বন কপিটি দেয়; সবার সামনে উৎসের নাম বলতে না পারার দায় সে নেয়।</li>
+<li><strong>আগের কোন ঘটনার কারণে এটা ঘটে?</strong> — মায়া আরিফের তারিখ-দেওয়া কার্বন কপি পায়: মেরামত না হওয়ায় পরের চাপ-পরীক্ষায় বিপদের কথা তিনি আগেই বুঝেছিলেন; পরীক্ষার খবর পেয়ে নীলা তাঁর পুরোনো চিঠিটি পাঠিয়েছে। (১৫ নম্বর ধাপ)</li>
+<li><strong>কার ওপর বা কিসের ওপর প্রভাব পড়ে?</strong> — সিল-করা চিঠি (৩ নম্বর ধাপ)</li>
+<li><strong>এতে কোন লক্ষ্য এগোয় বা বাধা পায়?</strong> — নিচু পাড়ার মানুষকে সতর্ক করা আর বিপজ্জনক চাপ-পরীক্ষা থামানো। (৬ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<p><img src="assets/m8/05-choice-preview.png" alt="আসল বাংলা প্রস্তাবে বদলানো সিদ্ধান্ত, তার কারণ, চিঠি আর লক্ষ্য দেখা যায়।"></p>
+<h2 id="৫-বিপদ-মেটান-একটা-পরশন-খোলা-থাকুক"><a class="header" href="#৫-বিপদ-মেটান-একটা-পরশন-খোলা-থাকুক">৫. বিপদ মেটান; একটা প্রশ্ন খোলা থাকুক</a></h2>
+<p>মায়ার দেওয়া কাজে লাগার মতো প্রমাণ দেখে ইঞ্জিনিয়ারেরা পরীক্ষা থামান। নিরাপত্তার লক্ষ্য, পরিচয় গোপন রাখার লক্ষ্য আর তাঁদের দ্বন্দ্ব—তিনটিই একসঙ্গে মিটেছে বলে রাখব। এটা আমাদের বেছে নেওয়া ফল; অ্যাপ ইঞ্জিনিয়ারিংয়ের প্রমাণ পরীক্ষা করে না, সমঝোতাটা বিশ্বাসযোগ্য কি না-ও বিচার করে না। নীল তারার রহস্য ইচ্ছে করেই খোলা থাকছে।</p>
+<h3 id="১৯-পরীকষা-থামুক-তথযদাতা-আড়ালে-থাকুক"><a class="header" href="#১৯-পরীকষা-থামুক-তথযদাতা-আড়ালে-থাকুক">১৯. পরীক্ষা থামুক, তথ্যদাতা আড়ালে থাকুক</a></h3>
+<p><strong>মীমাংসা করুন → নির্দিষ্ট ঘটনার মাধ্যমে একটা বিষয় মেটান</strong> নিন।</p>
+<ul>
+<li><strong>কোন বিষয়টার মীমাংসা হচ্ছে?</strong> — নিচু পাড়ার মানুষকে সতর্ক করা আর বিপজ্জনক চাপ-পরীক্ষা থামানো। (৬ নম্বর ধাপ)</li>
+<li><strong>কী ঘটলে এটা মেটে?</strong> — ইঞ্জিনিয়ারেরা পুরোনো মেরামতের ত্রুটি মিলিয়ে আজ রাতের পরীক্ষা থামায় আর নিচু পাড়ায় সতর্কবার্তা দেয়; প্রকাশ করা কপিতে নীলার ভাইয়ের পরিচয় গোপন থাকে।</li>
+<li><strong>কে এটা ঘটায়?</strong> — মায়া (১ নম্বর ধাপ)</li>
+<li><strong>কোন ঘটনা থেকে এই মীমাংসা আসে?</strong> — তথ্যদাতার সংকেত মুছে মায়া ইঞ্জিনিয়ারদের তারিখ-দেওয়া কার্বন কপিটি দেয়; সবার সামনে উৎসের নাম বলতে না পারার দায় সে নেয়। (১৮ নম্বর ধাপ)</li>
+<li><strong>একই ঘটনায় আর কোন সম্পর্কিত বিষয়গুলো মেটে?</strong> — প্রকাশ করা প্রমাণে ভাইয়ের পরিচয় গোপন রাখা। (১১ নম্বর ধাপ); বিশ্বাসযোগ্য সতর্কবার্তা দিতে মায়ার প্রমাণ প্রকাশ করা দরকার, কিন্তু মূল চিঠিতে নীলার ভাইয়ের পরিচয় বেরিয়ে যাবে; নীলা তা প্রকাশে রাজি নয়। (১৪ নম্বর ধাপ)</li>
+</ul>
+<p>প্রস্তাবের অর্থ আর বেছে দেওয়া বিষয়গুলো দেখে <strong>এই অগ্রগতি নিশ্চিত করুন</strong> নিন।</p>
+<h2 id="একটা-পরশন-খোলা-রেখেই-সমাপতি-অনুমোদন-করুন"><a class="header" href="#একটা-পরশন-খোলা-রেখেই-সমাপতি-অনুমোদন-করুন">একটা প্রশ্ন খোলা রেখেই সমাপ্তি অনুমোদন করুন</a></h2>
+<p>এখন একটি বিষয় না-মেটা থাকার কথা: <strong>খামে নীল তারাটা কে এঁকেছে, তা জানা।</strong> অন্য লক্ষ্য আর দ্বন্দ্ব মিটেছে। <strong>শেষ করুন</strong>, তারপর <strong>ইচ্ছে করে খোলা সমাপ্তি রাখুন; তালিকার বিষয়গুলো অমীমাংসিত থাকুক</strong> নিন। লক্ষ্যটি খোলা থাকলে সব মিটেছে এমন সমাপ্তির পছন্দ পাওয়া যাবে না।</p>
+<p>দেখে নিন: <strong>আপনার অনুমোদিত সমাপ্তি</strong>, <strong>সমাপ্তি: ইচ্ছে করেই খোলা রাখা হয়েছে।</strong>, আর একটি না-মেটা বিষয়। বিপদের মূল গল্প শেষ হলো; প্রেরককে নিয়ে প্রশ্নটা আমরা মেনেই রাখলাম। এতে অন্য গল্পে নিয়ে যাওয়ার হুক বা শেষ করা গদ্য তৈরি হয় না।</p>
+<p><img src="assets/m8/07-open-ending.png" alt="আসল বাংলা চিত্রে অনুমোদিত সমাপ্তি আর ইচ্ছে করে খোলা রাখা একটি বিষয়।"></p>
+<h2 id="ইতিহাস-না-মুছে-সিদধানত-ফেরান"><a class="header" href="#ইতিহাস-না-মুছে-সিদধানত-ফেরান">ইতিহাস না মুছে সিদ্ধান্ত ফেরান</a></h2>
+<p>সমাপ্তি অনুমোদনের আগে, ১৯ নম্বর ধাপের পরপরই <strong>↶ শেষ সিদ্ধান্ত ফিরিয়ে নিন</strong> দিয়ে দেখতে পারেন। মীমাংসাটি সরে যাবে; নিরাপত্তার লক্ষ্য, পরিচয় গোপন রাখার লক্ষ্য, দ্বন্দ্ব আর নীল তারার লক্ষ্য—চারটি বিষয় আবার না-মেটা হবে। ফিরিয়ে নেওয়া সিদ্ধান্তের রেকর্ড থাকবে। আগের পছন্দগুলো দিয়ে ১৯ নম্বর ধাপ আবার করুন, তারপর খোলা সমাপ্তি অনুমোদন করুন। এই উদ্ধারপথ চালিয়ে দেখা হয়েছে। আবার করার আলাদা বোতাম বা যেকোনো পুরোনো বিষয় বদলানোর সাধারণ সম্পাদক নেই; Undo-কে তা ধরে নেবেন না।</p>
+<h2 id="দূরের-একটা-যোগ-ধরে-এগোন"><a class="header" href="#দূরের-একটা-যোগ-ধরে-এগোন">দূরের একটা যোগ ধরে এগোন</a></h2>
+<p>সমাপ্তির পর <strong>অথবা গল্পের একটা অংশ বেছে নিন</strong> থেকে ১৮ নম্বর ধাপে তথ্যদাতার সংকেত মুছে প্রমাণ দেওয়ার সিদ্ধান্তটি নিন। পাশের তথ্যের জায়গায় ১৫ নম্বর ধাপের কার্বন কপি পাওয়ার ঘটনার সংযোগে চাপুন। <strong>কারণ</strong> সম্পর্ক ধরে সেই আবিষ্কারে ফিরবেন, যেটিতে সিদ্ধান্তের পথ খুলেছিল। পাশের তালিকায় সম্পর্কের নাম আর অন্য বিষয়টি আছে, কিন্তু কোন দিকে সম্পর্ক যাচ্ছে তা আলাদা করে লেখা নেই। দিক মিলিয়ে নিতে চিত্রের তির বা ১৫ ও ১৮ নম্বর ধাপে বেছে দেওয়া বিষয়গুলো দেখুন। সিল দেখা আর চিঠি পাওয়া অন্য সূত্র; আগে ঘটেছে বলেই প্রতিটি ঘটনা পরের প্রতিটি ঘটনার কারণ নয়।</p>
+<p><img src="assets/m8/08-inspector.png" alt="আসল তথ্যের জায়গায় সিদ্ধান্ত আর তার স্পষ্ট সংযোগগুলো।"></p>
+<p>পাশের তথ্যে <strong>original_text</strong>-ও থাকে, যেখানে ১৮ নম্বর ধাপের বাদ দেওয়া প্রথম খসড়াটি আছে। এটা কোথা থেকে লেখাটি এল তার রেকর্ড, আরেকটা ঘটে যাওয়া ঘটনা নয়। নিশ্চিত করা নাম আর <strong>কাজ</strong>-এর ঘরে সংকেত মুছে কপি দেওয়ার সিদ্ধান্তটি আছে।</p>
+<p>একটি বিষয় বেছে নিলে তালিকাটি আর দেখা যায় না। সংযোগের বোতাম ধরে বা চিত্রের বিষয়ে চাপ দিয়ে এগোতে পারেন; পাতা আবার খুললে বাছাই সরে গিয়ে তালিকা ফিরে আসে। <strong>পুরোটা দেখুন</strong> দিয়ে সব দেখুন; পুরো কথা পড়তে বড় করে দেখুন বা পাশের তথ্য পড়ুন। <strong>সাজিয়ে নিন</strong> গল্পের সত্যি বদলায় না, শুধু চিত্র সাজায়। সংরক্ষিত গল্প আবার খুললে চিত্র আর অনুমোদিত সমাপ্তি থাকে।</p>
+<h2 id="লেখকের-অনয-সিদধানত-চেষটা-করুন"><a class="header" href="#লেখকের-অনয-সিদধানত-চেষটা-করুন">লেখকের অন্য সিদ্ধান্ত চেষ্টা করুন</a></h2>
+<p>মায়া যদি তথ্যদাতাকে আড়াল করতে না চাইত? নীলা যদি মূল চিঠির বদলে কপি পাঠাত? এগুলো নতুন সংস্করণের সম্ভাবনা; যাচাই করা এই সংস্করণের ঘটনা নয়। আলাদা গল্পে চেষ্টা করুন, যাতে পুরোনো গৃহীত সিদ্ধান্ত পাল্টানোর দরকার না হয়। নীল তারার প্রেরক জেনে গেলে পুরো মিটে যাওয়া সমাপ্তি চাইবার আগে লক্ষ্যটিও স্পষ্ট করে মেটান। ব্যাখ্যাটা তৃপ্তি দিল কি না, আপনি ঠিক করবেন; অ্যাপ আপনার অনুমোদিত বিষয়গুলো ধরে রাখে।</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="গলপের-গাঁথুনি-থেকে-গদয"><a class="header" href="#গলপের-গাঁথুনি-থেকে-গদয">“গল্পের গাঁথুনি থেকে গদ্য”</a></h1>
+<p><strong>ভাষা:</strong> <a href="../topics/prose.html">English</a> · বাংলা</p>
+<p><strong>রূপরেখা — পুরো শেখার পাঠ নয়।</strong></p>
+<p><strong>পরিকল্পনায় (Envisioned) থাকা অধ্যায়।</strong></p>
+<p>ভাবনার পথটা হলো অনুমোদিত গাঁথুনি, সৃজনশীল গদ্য, ভালো-মন্দ নতুন প্রস্তাব দেখা, তারপর সংশোধন। গদ্যে সুন্দর কোনো নতুন কথা এলেই সেটা যেন লেখকের অনুমতি ছাড়া গল্পের সত্যি হয়ে না যায়। এখনও প্রকাশ না-করা পরীক্ষামূলক অ্যাপে গাঁথুনি বের করা, ভাষামডেলের গদ্য, গদ্য সম্পাদনা, নতুন প্রস্তাব পর্যালোচনা আর চূড়ান্ত গদ্য সংরক্ষণ একসঙ্গে নেই। এটা রূপরেখা, এখন ব্যবহার করার বোতামের তালিকা নয়।</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="আপনার-নিজের-গলপ"><a class="header" href="#আপনার-নিজের-গলপ">“আপনার নিজের গল্প”</a></h1>
+<p><strong>ভাষা:</strong> <a href="../topics/your-story.html">English</a> · বাংলা</p>
+<p><strong>রূপরেখা — পুরো শেখার পাঠ নয়।</strong></p>
+<p><strong>পরিকল্পনায় (Envisioned) থাকা অধ্যায়।</strong></p>
+<p>শেষ পর্যন্ত গল্পটা শুরু হবে আপনার নিজের ভাবনা থেকে। গঠন কল্পনাকে সাহায্য করুক। এমন যেন না হয় যে গল্প লিখতে গিয়ে আপনাকে প্রম্পট ইঞ্জিনিয়ারিং শিখতে হচ্ছে। ভবিষ্যতের পাঠে কী স্থির থাকবে আর কোথায় চমক আসতে পারে দেখব। পুরো গদ্যযাত্রা এখনও পরিকল্পনায়, এখানে দেখানো হয়নি।</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
