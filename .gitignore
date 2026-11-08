@@ -1,0 +1,8 @@
+# pre injected: 
+.venv/
+dist/
+.vscode
+__pycache__
+gh-pages
+target/
+.DS_Store
