@@ -23,3 +23,7 @@ uv run deploy
 ```
 
 Deployment now builds English and Bangla before applying the existing asset audit. A failed build prevents publication. The established helper force-pushes an orphan `gh-pages` artifact commit to this book repository’s `origin`; GitHub Pages uses `gh-pages` and `/docs`. This is a public action. Keep the Studio repository separate. The source history remains on `main`.
+
+## Editorial terminology
+
+Maintain recurring concepts and exact displayed controls in [the English–Bangla glossary](GLOSSARY.md). Natural prose may vary; instructional labels must match the current application.

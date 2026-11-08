@@ -18,6 +18,8 @@ Your aim is to give Mina a goal, introduce that complication, connect the repair
 
 ## 1. Give the story a home
 
+If the controls are in Bangla, choose **English** from **অ্যাপের ভাষা** at the top; in English this control is labeled **Interface language**. If they are already in English, leave the setting as it is.
+
 Open **Start a new story**. Enter **Umbrella draft** as the **Story title**. Leave **Random seed** at its default and select **Create story ↗**.
 
 ![The real new-story form filled with Umbrella draft, the default seed, and the Create story button.](../assets/00-create.png)
@@ -26,7 +28,7 @@ Open **Start a new story**. Enter **Umbrella draft** as the **Story title**. Lea
 
 An empty workspace opens. Before adding events, try changing the story’s information.
 
-Choose **Story Properties** beside the story title. Change **Story title** to **The Borrowed Umbrella**. You can also add a subtitle, synopsis, genre, and author notes. In this sample, the subtitle is **A promise kept**. These fields are optional. Choose **English** as **Story language** and select **Save properties**.
+Choose **Story Properties** beside the story title. Change **Story title** to **The Borrowed Umbrella**. You can also add a subtitle, synopsis, genre, and author notes. In this sample, the subtitle is **A promise kept**. These fields are optional. New stories currently start with **English** as **Story language**, regardless of the interface language. You can override it independently. Keep **English** for this exercise and select **Save properties**.
 
 ![The real Story Properties form shows the renamed story, optional information, story language and save button.](../assets/01-properties.png)
 

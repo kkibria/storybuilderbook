@@ -16,6 +16,8 @@ Think of the workspace as a place to keep the story behind the words: who wants 
 
 At the top, **Your stories** lets you return to saved work. **Interface language** switches English/Bangla without translating story content. **Story Properties**, beside the story title, lets you rename the story and edit its subtitle, synopsis, genre, story language and author notes; these changes save with the project. **Start a new story** creates another project. A new story begins empty, so you can introduce the people and circumstances you actually want.
 
+You can enter text in any Unicode-supported language, regardless of the interface or declared story language. No automatic translation occurs.
+
 **Story journeys** keeps your place. Beside it, the intention buttons ask what you want to do next: expand, deepen, escalate, reveal, connect, redirect, resolve, or conclude. Below them, the development panel offers ways to express that intention. The panel can ask for a missing essential detail before showing a preview.
 
 The preview is a pause for your judgment. Read the proposed meaning, correct a binding if needed, and confirm only when it expresses your intention. The graph changes after confirmation. **Undo last decision** can recover the most recent accepted decision; it is not an unrestricted edit of any earlier moment.
